@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD06LE35DS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JD06LE35DS');
+        </script>
+
+    	<meta charset='utf-8'>
+    	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=0.75">
+
+        <title>Blender Add-Ons | CG Meerkat</title>
+        <meta name="description" content="Blender addons and assets. CG Meerkat’s tools integrate into Blender 3D software to help designers, animators, and 3D artists like you with your 3D modeling and rendering needs.">
+
+        <link rel="icon" href="/logo.jpg">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../sty.css">
+        <style>
+            header {
+                background-color: saddlebrown;
+                color: white;
+                background-image: url(hero-blur.png), url(hero-placehold.jpg);
+                min-height: 50vh;
+            }
+            .pearly {
+                text-shadow: 0 0 .5rem #7CFC00, 0 0 1rem #4CBB17;
+                filter: saturate(1.5);
+                background-image: url(effect-translucent.png);
+                background-blend-mode: soft-light;
+            }
+        </style>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="/events.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
+                    <span  class="d-inline-block pt-2 ms-2">CG Meerkat</span>
+                </a>
+                <a class="btn btn-outline-danger" href="https://cgmeerkat.gumroad.com" onclick="trackButtonClick('header_all_products')">All Products</a>
+            </div>
+        </nav>
+        <header class="hero d-flex flex-column">
+            <div class="container mt-auto">
+                <div class="row my-5 row-cols-1 row-cols-md-2">
+                    <div class="col blurb">
+                        <h1 class="display-5">Take your Blender game to the next level.</h1>
+                        <p class="lead">
+                            Level up your creations and streamline your workflow with CG Meerkat’s Blender add-ons, node setups, and assets.
+                        </p>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </header>
+        <section class="pearly bg-success text-white py-4 text-center">
+            <div class="container">
+                <h3 class="display-5">Get <a href="https://cgmeerkat.gumroad.com/l/blender-AgMax" class="text-white" onclick="trackLinkClick('promo_AgMax')"><em>AgMax</em></a> 35% Off</h3>
+                <p class="lead">
+                    Use Discount Code <kbd><code class="text-warning">SUMMER24</code></kbd>
+                </p>
+                <small>Discount Code Valid Until 1 Aug 2024</small>
+            </div>
+        </section>
+        <section class="product">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <img src="products/Origin-Wrangler.png" alt="Origin Wrangler addon">
+                    </div>
+                    <div class="col descript d-flex flex-column">
+                        <div class="mb-auto">
+                            <h2>Origin Wrangler</h2>
+                            <p>
+                                A lightweight but powerful and time-saving Blender add-on for manipulating objects’ origins efficiently. Bulk-align origins, set origins to selected faces/edges/vertices, interpolate origins, set origins on X, Y, and/or Z axes (local and global), set origins based on post-modifiers geometry…
+                            </p>
+                        </div>
+                        <div class="row row-cols-1 row-cols-lg-2">
+                            <div class="col mt-2">
+                                <a class="btn btn-danger w-100" href="https://cgmeerkat.gumroad.com/l/blender-origin-wrangler" onclick="trackButtonClick('gumroad_origin_wrangler')">See How It Works on Gumroad</a>
+                            </div>
+                            <div class="col mt-2">
+                                <a class="btn btn-outline-danger disabled w-100">Coming Soon to BlenderMarket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product bg-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col descript d-flex flex-column">
+                        <div class="mb-auto">
+                            <h2>Ultimate Compositor Cavity</h2>
+                            <p>
+                                A screen-space cavity pass in 1 node.
+                            </p>
+                        </div>
+                        <div class="row row-cols-1 row-cols-lg-2">
+                            <div class="col mt-2">
+                                <a class="btn btn-dark w-100" href="https://cgmeerkat.gumroad.com/l/blender-cavity" onclick="trackButtonClick('gumroad_cavity')">See The Cool Stuff It Can Do</a>
+                            </div>
+                            <div class="col mt-2">
+                                <a class="btn btn-outline-dark disabled w-100">Coming Soon to BlenderMarket</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col d-flex align-items-center">
+                        <img src="products/Ultimate-Compositor-Cavity.png" alt="Screen-Space Angular Cavity Compositor Node">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="product bg-dark text-white">
+            <div class="container">
+                <div class="row">
+                    <div class="col d-flex align-items-center">
+                        <img src="products/Vector-Math-Compositor-Nodes-Pack.png" alt="Vector Math Compositor Nodes Pack">
+                    </div>
+                    <div class="col descript d-flex flex-column">
+                        <div class="mb-auto">
+                            <h2>Vector Math Compositor Nodes Pack</h2>
+                            <p>
+                                <strong>FREE!</strong> Vector math nodes in the compositor.
+                            </p>
+                        </div>
+                        <div class="row row-cols-1 row-cols-lg-2">
+                            <div class="col mt-2">
+                                <a class="btn btn-warning w-100" href="https://cgmeerkat.gumroad.com/l/blender-compositor-vector-math-nodes" onclick="trackButtonClick('gumroad_vector_nodes')">Free Download</a>
+                            </div>
+                            <div class="col mt-2">
+                                <a class="btn btn-outline-warning disabled w-100">Coming Soon to BlenderMarket</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="py-5 bg-light text-center">
+            <div class="container">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.readthedocs.io" onclick="trackLinkClick('footer_read_the_docs')">Documentation</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com" onclick="trackLinkClick('footer_gumroad')">Gumroad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D" onclick="trackLinkClick('footer_gum_blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <small>
+                    &copy; 2024 CG Meerkat. <span class="text-muted">Blender, Blender add-ons / addons / plug-ins / plugins / extensions are licensed under GPL.</span>
+                </small>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+:root, html, body {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+}
+.blurb {
+    background-color: rgba(0,0,0,0.5);
+    box-shadow: 0 0 2.5rem 2.5rem rgba(0,0,0,0.5);
+    border-radius: 2.5rem;
+}
+header, section {
+    background-position: center center, center center;
+    background-size: cover, cover;
+    overflow: hidden;
+}
+.product img {
+    width: 250px;
+    max-width: 35vw;
+}
+.product .col {
+    flex-grow: 0;
+}
+.product .descript {
+    flex-grow: 1;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+code,kbd {
+    text-shadow: none;
+}
+a, a.nav-link {
+    color: crimson;
+}
+footer .nav {
+    margin: 0 -1rem 1.5rem -1rem;
+}

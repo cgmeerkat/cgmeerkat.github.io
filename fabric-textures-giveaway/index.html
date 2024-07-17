@@ -41,7 +41,7 @@
     <body>
         <nav class="navbar navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/" onclick="trackLinkClick('navbar_brand_to_home')">
                     <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
                     <span  class="d-inline-block pt-2 ms-2">CG Meerkat</span>
                 </a>
@@ -76,6 +76,7 @@
                         </p>
                         <p class="text-muted">
                             <small>
+                                Blender cloth material,
                                 Blender fabric texture free,
                                 Blender textile shader free,
                                 Blender satin material,
@@ -113,8 +114,18 @@
                         <p class="lead">
                             You can download the <strong>shader nodes</strong> for these fabric textures for free!
                         </p>
-                        <a class="btn btn-lg btn-warning fw-bold" href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials" onclick="trackButtonClick('gumroad_textiles_nodes')">Get It from Gumroad</a>
-                        <a class="btn btn-lg btn-outline-info" href="https://cgmeerkat.gumroad.com/p/new-release-8-textile-materials-blender-fabric-shader-nodes-pack" onclick="trackButtonClick('gumroad_post_textiles_renders')">See Examples</a>
+                        <div class="d-grid gap-2 mb-2">
+                            <a class="btn btn-lg btn-warning fw-bold" href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials" onclick="trackButtonClick('gumroad_textiles_nodes')">Get It from Gumroad</a>
+                            
+                        </div>
+                        <div class="row row-cols-1 row-cols-lg-2 g-2">
+                            <div class="col">
+                                <a class="d-block btn btn-lg btn-outline-warning" href="https://cgmeerkat.gumroad.com/p/new-release-8-textile-materials-blender-fabric-shader-nodes-pack" onclick="trackButtonClick('gumroad_post_textiles_renders')">See Examples</a>
+                            </div>
+                            <div class="col">
+                                <a class="d-block btn btn-lg btn-outline-info" href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q==" onclick="trackButtonClick('gumroad_all_mats')">More Materials</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -134,7 +145,12 @@
                         <a class="nav-link" href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D" onclick="trackLinkClick('footer_gum_blog')">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')">
+                        <a class="nav-link" href="https://www.youtube.com/@CGmeerkat" onclick="trackLinkClick('footer_youtube')" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')" title="Twitter">
                             <i class="bi bi-twitter-x"></i>
                         </a>
                     </li>

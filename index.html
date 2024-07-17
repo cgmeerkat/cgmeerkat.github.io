@@ -38,6 +38,9 @@
             #textiles-pack {
                 background-image: url(satin.webp);
             }
+            #article-tonemapper {
+                background-image: url(blog/who-needs-a-tonemapper/sweep.webp);
+            }
         </style>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -46,34 +49,53 @@
     <body>
         <nav class="navbar navbar-dark bg-dark">
             <div class="container justify-content-center">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="https://cgmeerkat.gumroad.com" onclick="trackLinkClick('navbar_brand_to_gumroad')">
                     <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
                     <span class="d-inline-block pt-2 ms-2">CG Meerkat</span>
                 </a>
             </div>
         </nav>
-        <main class="row row-cols-1 row-cols-md-2 text-white">
+        <main class="row row-cols-1 row-cols-md-2 text-white g-0">
             <section class="col bg-primary d-flex flex-column justify-content-end" id="blender">
                 <div class="m-5 blurb">
-                    <h1 class="display-5">Level up your Blender workflow.</h1>
+                    <h1 class="display-4">Level up your Blender workflow.</h1>
                     <p class="lead">
                         Level up your creations and streamline your workflow with CG Meerkat’s Blender add-ons, node setups, and assets.
                     </p>
-                    <a class="btn btn-lg btn-outline-warning" href="https://cgmeerkat.gumroad.com" onclick="trackButtonClick('homepage_hero_to_gumroad')">All Products</a>
+                    <a class="btn btn-lg btn-outline-warning a" href="https://cgmeerkat.gumroad.com" onclick="trackButtonClick('homepage_hero_to_gumroad')">All Products</a>
+                    <a class="btn btn-lg btn-outline-warning b" href="blender/" onclick="trackButtonClick('homepage_hero_to_blender_landing')">All Products</a>
                 </div>
             </section>
-            <section class="col bg-black d-flex flex-column justify-content-end" id="textiles-pack">
-                <div class="m-5 blurb">
-                    <h2 class="display-5"><em>FREE</em> Giveaway: Pack of 3 Fabric 4K Textures</h2>
-                    <p class="lead">
-                        Download our fabric normal maps and ambient occlusion maps to make detailed textile, cloth, and fabric materials in the 3D software or game engine of your choice.
-                    </p>
-                    <a class="btn btn-lg btn-outline-success" href="fabric-textures-giveaway" onclick="trackButtonClick('homepage_hero_to_textiles_giveaway_page')">
-                        <i class="bi bi-file-earmark-arrow-down"></i>
-                        Download
-                    </a>
-                </div>
-            </section>
+            <div class="col d-flex flex-column" style="justify-content: stretch;">
+                <section class="bg-black d-flex flex-column justify-content-end flex-grow-1" id="textiles-pack">
+                    <div class="m-5 blurb">
+                        <h2 class="display-5"><em>FREE</em> Giveaway: Pack of 3 Fabric 4K Textures</h2>
+                        <p class="lead">
+                            Download our fabric normal maps and ambient occlusion maps to make detailed textile, cloth, and fabric materials in the 3D software or game engine of your choice.
+                        </p>
+                        <a class="btn btn-lg btn-outline-success" href="fabric-textures-giveaway/" onclick="trackButtonClick('homepage_hero_to_textiles_giveaway_page')">
+                            <i class="bi bi-file-earmark-arrow-down"></i>
+                            Download
+                        </a>
+                    </div>
+                </section>
+                <section class="bg-black d-flex flex-column justify-content-end flex-grow-1" id="article-tonemapper">
+                    <div class="m-5 blurb">
+                        <h2 class="display-5">Article: Who Needs a Tonemapper?</h2>
+                        <p class="lead">
+                            What is tonemapping? What are the qualities of a good tonemapper?
+                        </p>
+                        <p class="lead m-0">
+                            <a href="blog/who-needs-a-tonemapper/" onclick="trackButtonClick('homepage_hero_to_blog_article_tonemapper')" class="a">
+                                <strong>Read More</strong>
+                            </a>
+                            <a href="https://cgmeerkat.gumroad.com/p/" onclick="trackButtonClick('homepage_hero_to_gumroad_post_tonemapper')" class="b">
+                                <strong>Read More</strong>
+                            </a>
+                        </p>
+                    </div>
+                </section>
+            </div>
         </main>
         <footer class="py-5 bg-light text-center">
             <div class="container">
@@ -85,7 +107,12 @@
                         <a class="nav-link" href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D" onclick="trackLinkClick('footer_gum_blog')">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')">
+                        <a class="nav-link" href="https://www.youtube.com/@CGmeerkat" onclick="trackLinkClick('footer_youtube')" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')" title="Twitter">
                             <i class="bi bi-twitter-x"></i>
                         </a>
                     </li>
@@ -95,5 +122,6 @@
                 </small>
             </div>
         </footer>
+        <script src="random.js"></script>
     </body>
 </html>

@@ -3,8 +3,8 @@
     font-optical-sizing: auto;
 }
 .blurb {
-    background-color: rgba(0,0,0,0.5);
-    box-shadow: 0 0 2.5rem 2.5rem rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.625);
+    box-shadow: 0 0 2rem 3rem rgba(0,0,0,0.625);
     border-radius: 2.5rem;
 }
 header, section {
@@ -32,4 +32,42 @@ a, a.nav-link {
 }
 footer .nav {
     margin: 0 -1rem 1.5rem -1rem;
+}
+
+body:not(.b) .b {
+    display: none;
+}
+body.b .a {
+    display: none;
+}
+
+.condense, .condense * {
+    overflow: hidden;
+    overflow-wrap: normal;
+    position: relative;
+    text-overflow: ellipsis;
+}
+.condense {
+    margin-bottom: 0.5rem;
+    max-height: 10em;
+    flex-grow: 1;
+}
+.condense::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: linear-gradient(to top,var(--fade-bg-color),transparent);
+    height: 1.75em;
+}
+
+.gumroad-button {
+    height: 2.375rem;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right,transparent,black,transparent);
 }

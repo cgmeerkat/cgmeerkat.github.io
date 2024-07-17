@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD06LE35DS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JD06LE35DS');
+        </script>
+
+    	<meta charset='utf-8'>
+    	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+        <title>Qualities of Good Tonemappers | CG Meerkat Blog</title>
+        <meta name="description" content="Tone mapping is a critical process in 3D rendering and game development that significantly affects how digital images and scenes are perceived. It’s a technique used to convert high dynamic range (HDR) images into a format suitable for display on devices with limited dynamic range, such as monitors and TVs. This article explores tone mapping in-depth, its necessity, how it operates, the &quot;six notorious colors&quot; problem, and the use of the Academy Color Encoding System (ACES).">
+
+        <link rel="icon" href="/logo.jpg">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../../sty.css">
+        <style>
+            #subscribe-email-form {
+                max-width: 50em;
+                margin: 0 auto;
+            }
+            article {
+                height: 75vh;
+                overflow: hidden;
+                position: relative;
+                line-height: 1.75;
+            }
+            article h2, article h3, article h4, article h5, article h6 {
+                line-height: 1.5;
+            }
+            article > .overlay {
+                text-align: center;
+                color: var(--bs-danger);
+                font-size: 1.25rem;
+                position: absolute;
+                height: 37.5vh;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(to top, white, transparent);
+                padding-top: calc(37.5vh - 1.5em);
+                line-height: 1;
+            }
+            .overlay a {
+                text-decoration: none;
+            }
+            .img-fluid {
+                width: 100%;
+                max-width: 65vh;
+                margin: 0 auto;
+                display: block;
+            }
+        </style>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="/events.js"></script>
+    </head>
+    <body>
+        <main class="container">
+            <header class="navbar navbar-light">
+                <div class="container justify-content-center">
+                    <a class="navbar-brand" href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D" onclick="trackLinkClick('navbar_brand_to_gum_blog')">
+                        <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
+                        <span class="d-inline-block pt-2 ms-2 text-danger">CG Meerkat</span>
+                    </a>
+                </div>
+            </header>
+            <article class="py-5">
+                <div class="text-center mb-4">
+                    <h1>Who Needs a Tonemapper?</h1>
+                    <p class="lead text-muted m-0">17 July 2024</p>
+                </div>
+                <img src="4-tonemaps.jpg" alt="Comparison between the Standard, Filmic, ACES, and AgX view transforms." class="mb-4 img-fluid rounded">
+                <h2 id="understanding-tone-mapping-in-3d-rendering-and-games">Understanding Tone Mapping in 3D Rendering and Games</h2>
+                <p>Tone mapping is a critical process in 3D rendering and game development that significantly affects how digital images and scenes are perceived. It’s a technique used to convert high dynamic range (HDR) images into a format suitable for display on devices with limited dynamic range, such as monitors and TVs. This article explores tone mapping in-depth, its necessity, how it operates, the &quot;six notorious colors&quot; problem, and the use of the Academy Color Encoding System (ACES).</p>
+                <h3 id="what-is-tone-mapping-">What is Tone Mapping?</h3>
+                <p>Tone mapping is the process of compressing the wide range of luminosity in HDR images to fit the narrower range of standard dynamic range (SDR) displays. HDR images capture a broader spectrum of light intensities than SDR displays can show. Without tone mapping, the resulting images would either be too bright or too dark, losing crucial visual details.</p>
+                <h3 id="why-tone-mapping-is-used">Why Tone Mapping is Used</h3>
+                <ol>
+                <li><p><strong>Dynamic Range Compression</strong>: HDR images can represent much more detail in both dark and bright areas of a scene. Since most display devices can&#39;t handle this range, tone mapping compresses these details to fit within the display’s capabilities.</p>
+                </li>
+                <li><p><strong>Realism and Artistic Control</strong>: Tone mapping allows artists and designers to control the final look of an image or scene. By adjusting the mapping, they can emphasize certain visual aspects and achieve a more realistic or stylistically appropriate result.</p>
+                </li>
+                <li><p><strong>Consistency Across Devices</strong>: Different displays have varied dynamic ranges. Tone mapping helps ensure that an image looks good across all devices, providing a consistent viewing experience regardless of hardware.</p>
+                </li>
+                </ol>
+                <h3 id="how-tone-mapping-works">How Tone Mapping Works</h3>
+                <p>Tone mapping operates by applying a function to map the HDR luminance values to the SDR range. This process involves several key steps:</p>
+                <ol>
+                <li><p><strong>Luminance Adjustment</strong>: The algorithm first calculates the luminance (brightness) of each pixel in the HDR image.</p>
+                </li>
+                <li><p><strong>Mapping Function Application</strong>: It then applies a tone mapping curve or function to compress the luminance values. This function typically involves non-linear adjustments to ensure that both dark and bright regions are represented effectively.</p>
+                </li>
+                <li><p><strong>Color Transformation</strong>: Finally, the adjusted luminance values are combined with the original color values to produce an SDR image. This ensures that color fidelity is maintained while the luminance range is properly handled.</p>
+                </li>
+                </ol>
+                <h3 id="tone-mapping-algorithms">Tone Mapping Algorithms</h3>
+                <p>Several algorithms are used for tone mapping, each with different characteristics and goals:</p>
+                <ol>
+                <li><p><strong>Reinhard Tone Mapping</strong>: This is one of the simplest and most widely used tone mapping operators. It adjusts the luminance based on a scaling factor, preserving the overall appearance of the image while preventing clipping.</p>
+                </li>
+                <li><p><strong>ACES (Academy Color Encoding System)</strong>: ACES is a comprehensive color management and image interchange system developed by the Academy of Motion Picture Arts and Sciences. It includes a tone mapping function designed to preserve color fidelity and dynamic range from capture to display.</p>
+                </li>
+                <li><p><strong>Filmic Tone Mapping</strong>: Inspired by filmic properties, this operator simulates the response curve of photographic film. It provides a more natural look by emulating the characteristic roll-off and response curves found in real film.</p>
+                </li>
+                <li><p><strong>HDR Compressed</strong>: Some methods directly compress the HDR data into an SDR range, aiming to balance brightness and detail across the entire image.</p>
+                </li>
+                <li><p><strong>Drago and Ward</strong>: These methods use more sophisticated techniques to handle complex scenes and lighting conditions, focusing on maintaining detail in both highlights and shadows.</p>
+                </li>
+                </ol>
+                <h3 id="the-six-color-problem">The Six-Color Problem</h3>
+                <p>In the context of color representation and tone mapping, the “six notorious colors” issue refers to a problem where certain colors are misrepresented or appear incorrect when tone mapping is applied. These colors typically include:</p>
+                <ol>
+                <li><strong>Pure Red</strong></li>
+                <li><strong>Pure Green</strong></li>
+                <li><strong>Pure Blue</strong></li>
+                <li><strong>Cyan</strong></li>
+                <li><strong>Magenta</strong></li>
+                <li><strong>Yellow</strong></li>
+                </ol>
+                <p>These colors often experience clipping or color shifts due to the limitations of tone mapping algorithms and the discrepancies between HDR and SDR color spaces. Properly addressing these issues requires advanced algorithms and precise color management techniques to ensure accurate color reproduction.</p>
+                <h3 id="aces-academy-color-encoding-system-">ACES (Academy Color Encoding System)</h3>
+                <p>ACES is an open standard designed to manage color throughout the entire production pipeline, from capture through post-production to final display. It encompasses both a color encoding system and a tone mapping process. Key components include:</p>
+                <ol>
+                <li><p><strong>ACES Color Space</strong>: A wide-gamut color space that encompasses the full range of colors that can be captured or displayed, ensuring consistency and accuracy across different devices.</p>
+                </li>
+                <li><p><strong>ACEScct</strong>: A logarithmic encoding curve used to map HDR data into a format suitable for processing and display, while preserving the dynamic range and color fidelity.</p>
+                </li>
+                <li><p><strong>ACES RRT (Reference Rendering Transform)</strong>: A tone mapping operator that converts ACES color space to a display-referred color space, ensuring that images look consistent across various displays and devices.</p>
+                </li>
+                <li><p><strong>OCIO (OpenColorIO)</strong>: A color management system used in conjunction with ACES to handle complex color workflows and ensure accurate color representation throughout the pipeline.</p>
+                </li>
+                </ol>
+                <h3 id="conclusion">Conclusion</h3>
+                <p>Tone mapping is an essential process in 3D rendering and game development, enabling the effective representation of HDR content on devices with limited dynamic range. By understanding how tone mapping works, the challenges associated with color representation, and the role of advanced systems like ACES, artists and developers can achieve visually stunning results that remain consistent and true to their creative vision. As technology evolves, so too will the methods and tools for tone mapping, continuously enhancing our ability to present digital imagery in its best light.</p>
+                <a href="https://cgmeerkat.gumroad.com/p/">Read Full Article</a>
+
+                <div class="overlay">
+                    <a href="https://cgmeerkat.gumroad.com/p/" onclick="trackButtonClick('read_more_AgMax')">
+                        <i class="bi bi-chevron-down"></i>
+                        <strong>Read More</strong>
+                    </a>
+                </div>
+            </article>
+            <hr class="mt-5">
+            <section id="subscribe-email-form" class="py-5 px-1">
+                <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed">
+                    <input type="hidden" name="seller_id" value="3186981960865"/>
+                    <div class="row g-3">
+                        <div class="col-auto flex-grow-1">
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value=""/>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button" onclick="trackButtonClick('email_subscribe')">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-muted text-center">
+                    <small>You can unsubscribe anytime if you change your mind.</small>
+                </p>
+            </section>
+            <hr class="mb-5">
+            <footer class="pb-5 text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com" onclick="trackLinkClick('footer_gumroad')">Gumroad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D" onclick="trackLinkClick('footer_gum_blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/@CGmeerkat" onclick="trackLinkClick('footer_youtube')" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')" title="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <small>
+                    &copy; 2024 CG Meerkat
+                </small>
+            </footer>
+        </main>
+    </body>
+</html>

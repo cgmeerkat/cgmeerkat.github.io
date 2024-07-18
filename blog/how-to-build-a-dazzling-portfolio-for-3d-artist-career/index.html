@@ -29,6 +29,17 @@
         <link rel="stylesheet" href="../blog.css">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <!--https://github.com/sneas/img-comparison-slider-->
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"
+        ></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css">
+        <!--https://github.com/sneas/img-comparison-slider-->
+
         <script src="/events.js"></script>
     </head>
     <body>
@@ -93,12 +104,12 @@
 <li><strong>Showcase Different Skills</strong>: Display a range of abilities such as modeling, <a href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q==">texturing</a>, rigging, and animation. This demonstrates your versatility and competence.</li>
 <li><strong>Provide Context</strong>: For each project, include a brief description outlining the project’s goals, your role, the tools used, and any challenges faced. This context helps employers understand your thought process and problem-solving skills.</li>
 </ul>
-                <div class="card shadow-sm p-4 mb-3">
+                <div class="card shadow-sm p-4 mb-3 bg-gradient-light-cyan">
                     <p class="lead">
-                        <i class="bi bi-info-circle text-primary me-2"></i> If you’re a 3D artist and want to make cooler models, consider getting our material offerings. We have free PBR shaders over at the CG Meerkat Gumroad store.
+                        <i class="bi bi-info-circle text-info me-2"></i> If you’re a 3D artist and want to make cooler models, consider getting our material offerings. We have free PBR shaders over at the CG Meerkat Gumroad store.
                     </p>
                     <div class="text-center">
-                        <a href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q==" class="btn btn-dark" onclick="trackButtonClick('blog_artic_how_to_get_a_job_infobox_materials_gum')">Get Materials</a>
+                        <a href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q==" class="btn btn-info" onclick="trackButtonClick('blog_artic_how_to_get_a_job_infobox_materials_gum')">Get Materials</a>
                         <a href="https://cgmeerkat.gumroad.com" class="btn btn-outline-dark" onclick="trackButtonClick('blog_artic_how_to_get_a_job_infobox_all_products_gum')">All Products</a>
                     </div>
                 </div>
@@ -110,17 +121,36 @@
 <li><strong>Create Showreels</strong>: A well-edited showreel is invaluable for showcasing animations or interactive 3D elements. Keep it concise, with a duration of 1-2 minutes, and highlight your best animations and effects.</li>
 </ul>
 
-                <div class="card shadow-sm p-4 mb-3">
-                    <p class="lead">
-                        <i class="bi bi-info-circle text-primary me-2"></i> Speaking of presentation, using a <em>cavity effect</em> is a great way to accentuate the intricacies and geometric details of your 3D models and make your final renders look better than ever.
-                    </p>
-                    <img class="rounded img-fluid mb-3" src="cavity.webp" alt="Screen-Space Cavity">
-                    <div class="text-center">
-                        <a href="https://cgmeerkat.gumroad.com/l/blender-cavity" class="btn btn-dark" onclick="trackButtonClick('blog_artic_how_to_get_a_job_infobox_cavity_gum')">Learn About Our <em>Screen-Space Ultimate Cavity</em> Effect for Blender</a>
+                <div class="card shadow-sm p-4 mb-3 bg-light">
+                    <div class="row row-cols-1 row-cols-xl-2">
+                        <div class="col d-flex flex-column">
+                            <p class="lead mb-1">
+                                <i class="bi bi-info-circle text-primary me-2"></i> Speaking of presentation,
+                            </p>
+                            <p>
+                                using <em>cavity effects</em>, whether through texture maps or screen-space post-processing effects, is a great way to accentuate the intricacies and geometric details of your 3D models and make your final renders look better than ever.
+                            </p>
+                            <div class="d-none d-xl-block mt-auto">
+                                <a href="https://cgmeerkat.gumroad.com/l/blender-cavity" class="btn btn-dark" onclick="trackButtonClick('blog_artic_how_to_get_a_job_infobox_cavity_gum')">Learn About Our <em>Compositor Cavity</em> Effect for Blender</a>
+                            </div>
+                        </div>
+                        <div class="col text-center">
+                            <img class="a rounded img-fluid" src="cavity.webp" alt="Screen-Space Cavity">
+                            <img-comparison-slider class="b">
+                                <img class="rounded img-fluid" slot="first" src="hard-surface-model-yes-cavity.webp">
+                                <img class="rounded img-fluid" slot="second" src="hard-surface-model-no-cavity.webp">
+                            </img-comparison-slider>
+                            <p class="b text-muted mt-2 mb-0">
+                                <small>Slide the divider to compare the render with and without the cavity effect.</small>
+                            </p>
+                            <div class="mt-3 d-block d-xl-none">
+                                <a href="https://cgmeerkat.gumroad.com/l/blender-cavity" class="btn btn-dark" onclick="trackButtonClick('blog_artic_how_to_get_a_job_infobox_cavity_gum')">Learn About Our <em>Compositor Cavity</em> Effect for Blender</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <p class="m-0">
-                    Don’t forget your tonemapping solution is a critical piece to the puzzle of creating great-looking renders. Make sure tonemapping is enabled in your 3D software unless your scene has a narrow dynamic range. In Blender, the default AgX view transform is a solid option. Consider using a more versatile <em>adjustable</em> tonemapper that delivers superior visual quality, our tonemapper <a href="https://cgmeerkat.gumroad.com/l/blender-AgMax"><em>AgMax</em>.</a>
+                    Don’t forget your <a href="https://cgmeerkat.gumroad.com/p/who-needs-a-tonemapper">tonemapping solution</a> is a critical piece to the puzzle of creating great-looking renders. Make sure tonemapping is enabled in your 3D software unless your scene has a narrow dynamic range. In Blender, the default AgX view transform is a solid option. Consider using a more versatile <em>adjustable</em> tonemapper that delivers superior visual quality, our tonemapper <a href="https://cgmeerkat.gumroad.com/l/blender-AgMax"><em>AgMax</em>.</a>
                 </p>
             </article>
         </div>
@@ -128,7 +158,7 @@
             <div class="container">
                 <h3 class="display-5">Get <a href="https://cgmeerkat.gumroad.com/l/blender-AgMax" class="text-white" onclick="trackLinkClick('promo_AgMax_to_gumroad')"><em>AgMax</em></a> 35% Off</h3>
                 <p class="lead">
-                    Use Discount Code <kbd><code class="text-warning">SUMMER24</code></kbd>
+                    Use Discount Code <a href="https://cgmeerkat.gumroad.com/l/blender-AgMax" class="no-underline" onclick="trackLinkClick('promo_kbd_discount_code_to_gumroad_AgMax')"><kbd><code class="text-warning">SUMMER24</code></kbd></a>
                 </p>
                 <small>Discount Code Valid Until 1 September 2024</small>
             </div>
@@ -234,5 +264,6 @@
                 </small>
             </footer>
         </div>
+        <script src="../../random.js"></script>
     </body>
 </html>

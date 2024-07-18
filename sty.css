@@ -85,3 +85,14 @@ hr {
     background-blend-mode: soft-light;
 }
 /* heros + promostrips */
+
+.bg-gradient-light-cyan {
+    background: linear-gradient(to right bottom,aliceblue,#9AECDB);
+}
+.no-underline {
+    text-decoration: none !important;
+}
+
+.card {
+    line-height: 1.5;
+}

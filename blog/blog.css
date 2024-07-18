@@ -1,0 +1,37 @@
+#subscribe-email-form {
+    max-width: 50em;
+    margin: 0 auto;
+}
+article {
+    overflow: hidden;
+    position: relative;
+    line-height: 1.75;
+}
+article.doorway {
+    height: 75vh;
+}
+article h2, article h3, article h4, article h5, article h6 {
+    line-height: 1.5;
+}
+article > .overlay {
+    text-align: center;
+    color: var(--bs-danger);
+    font-size: 1.25rem;
+    position: absolute;
+    height: 37.5vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, white, transparent);
+    padding-top: calc(37.5vh - 1.5em);
+    line-height: 1;
+}
+.overlay a {
+    text-decoration: none;
+}
+.img-fluid {
+    width: 100%;
+    max-width: 65vh;
+    margin: 0 auto;
+    display: block;
+}

@@ -44,4 +44,8 @@
             <image:loc>https://cgmeerkat.github.io/blog/who-needs-a-tonemapper/4-tonemaps.jpg</image:loc>
         </image:image>
     </url>
+    <url>
+        <loc>https://cgmeerkat.github.io/blog/how-to-build-a-dazzling-portfolio-for-3d-artist-career/</loc>
+        <priority>0.9</priority>
+    </url>
 </urlset> 

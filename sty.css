@@ -71,3 +71,17 @@ hr {
     height: 1px;
     background: linear-gradient(to right,transparent,black,transparent);
 }
+
+/* heros + promostrips */
+#hero-blender {
+    background-color: saddlebrown;
+    color: white;
+    background-image: url(/blender/hero-blur.png), url(/blender/hero-placehold.jpg);
+}
+#pearly {
+    text-shadow: 0 0 .5rem #7CFC00, 0 0 1rem #4CBB17;
+    filter: saturate(1.5);
+    background-image: url(/blender/effect-translucent.png);
+    background-blend-mode: soft-light;
+}
+/* heros + promostrips */

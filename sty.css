@@ -96,3 +96,7 @@ hr {
 .card {
     line-height: 1.5;
 }
+
+img-comparison-slider {
+    cursor: ew-resize;
+}

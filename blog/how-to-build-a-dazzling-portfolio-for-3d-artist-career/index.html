@@ -136,10 +136,12 @@
                         </div>
                         <div class="col text-center">
                             <img class="a rounded img-fluid" src="cavity.webp" alt="Screen-Space Cavity">
-                            <img-comparison-slider class="b">
-                                <img class="rounded img-fluid" slot="first" src="hard-surface-model-yes-cavity.webp" alt="Blender 3D Grenade Model Composited with a Cavity Filter">
-                                <img class="rounded img-fluid" slot="second" src="hard-surface-model-no-cavity.webp" alt="Blender 3D Grenade Model without a Cavity Filter">
-                            </img-comparison-slider>
+                            <div class="b" onclick="trackOtherClick('blog_artic_how_to_get_a_job_infobox_cavity_compare_visor')">
+                                <img-comparison-slider>
+                                    <img class="rounded img-fluid" slot="first" src="hard-surface-model-yes-cavity.webp" alt="Blender 3D Grenade Model Composited with a Cavity Filter">
+                                    <img class="rounded img-fluid" slot="second" src="hard-surface-model-no-cavity.webp" alt="Blender 3D Grenade Model without a Cavity Filter">
+                                </img-comparison-slider>
+                            </div>
                             <p class="b text-muted mt-2 mb-0">
                                 <small>Slide the divider to compare the render with and without the cavity effect.</small>
                             </p>

@@ -11,3 +11,10 @@ function trackLinkClick(label) {
         'event_label': label,
     });
 }
+
+function trackOtherClick(label) {
+    gtag('event', 'click', {
+        'event_category': 'misc',
+        'event_label': label,
+    });
+}

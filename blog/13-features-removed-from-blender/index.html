@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD06LE35DS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JD06LE35DS');
+        </script>
+
+    	<meta charset='utf-8'>
+    	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+        <title>13 Features That Were Removed From Blender | CG Meerkat Blog</title>
+
+        <link rel="icon" href="/logo.jpg">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../../sty.css">
+        <link rel="stylesheet" href="../blog.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script src="/events.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="navbar navbar-light">
+                <div class="container justify-content-center">
+                    <a class="navbar-brand" href="/blog/" onclick="trackLinkClick('navbar_brand_to_blog_directory')">
+                        <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
+                        <span class="d-inline-block pt-2 ms-2 text-danger">CG Meerkat</span>
+                    </a>
+                </div>
+            </header>
+            <article class="py-4 mt-4">
+                <div class="text-center mb-4">
+                    <h1>13 Features That Were Removed From Blender</h1>
+                    <p class="lead text-muted m-0">19 July 2024</p>
+                </div>
+                <img src="halo.jpg" alt="halo drawing setting in the legacy Blender Internal render engine" class="mb-4 img-fluid rounded">
+                <p class="lead">
+                    As a Blender user since version 2.78, I’ve watched the best free 3D software evolve—many features got added, and some features got removed.
+                    This article goes over 13 features that older versions of Blender had that the latest one doesn’t.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">1. DupliFrames</h2>
+                <img src="dupliframes.png" alt="dupliframes" class="mb-4 img-fluid rounded">
+                <p>
+                    In Blender, DupliFrames refer to a technique used in animation where objects are duplicated and placed along the frames of an animation sequence.
+                    DupliFrames in Blender provide a method to duplicate objects across frames in an animation, facilitating the creation of repetitive or patterned animations with ease.
+                    DupliFrames were removed in Blender 2.80 because they were incompatible with the new dependency graph.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">2. Slow Parent</h2>
+                <img src="slow-parent.gif" alt="slow parent" class="mb-4 img-fluid rounded">
+                <p>
+                    Also removed in Blender 2.80 because they were incompatible with the new dependency graph, “Slow Parent” is a feature that allows you to create a delayed parenting effect between objects. This means that when an object is set as a child of another object with Slow Parent enabled, there will be a lag or delay in how the child object follows the movements of the parent object.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">3. RRT View Transform and Film Looks</h2>
+                <img src="film-looks.jpg" alt="film looks" class="mb-4 img-fluid rounded">
+                <p>
+                    Blender 2.79 and earlier has a view transform option in the color manamegement panel called <strong>“RRT”</strong> which is actually a type of <strong>ACES</strong> color transform. These Blender versions came with a vast array of film emulation LUTs too. RRT and the film LUTs was removed in Blender’s 2.80 release.
+                    <a href="https://blender.stackexchange.com/q/146971" rel="nofollow">The screenshot was taken in Blender 2.80. The film looks were obtained by copying the color management data folder from an older version of Blender into 2.80.</a>
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">4. Pre-4.1 Auto Amooth Shading Functionality</h2>
+                <img src="auto-smooth.png" alt="auto smooth" class="mb-4 img-fluid rounded">
+                <p>
+                    Prior to Blender 4.1, the “Auto Smooth” shading option was located in the mesh data tab.
+                    What this means is that the Auto Smooth settings are shared between objects that share the same mesh data. So when you change the Auto Smooth settings of an instance, its other instances have their Auto Smooth settings updated automatically.
+                    In 4.1, Auto Smooth was changed to a modifier. Modifiers are not linked between objects just because they share mesh data. So to change the Auto Smooth of a set of linked objects, you have to change all of their modifiers.
+                </p>
+                <p>
+                    Although the new Auto Smooth makes this particular use case more cumbersome, it introduced benefits such as being able to calculate the auto-smoothed normals at specific points in objects’ modifier stacks.
+                </p>
+            </article>
+            <hr class="m-0">
+            <section id="subscribe-email-form" class="py-5 px-1">
+                <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed">
+                    <input type="hidden" name="seller_id" value="3186981960865"/>
+                    <div class="row g-3">
+                        <div class="col-auto flex-grow-1">
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value=""/>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button" onclick="trackButtonClick('email_subscribe')">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-muted text-center m-0">
+                    <small>You can unsubscribe anytime if you change your mind.</small>
+                </p>
+            </section>
+            <hr class="m-0">
+            <article class="py-4">
+                <h2 class="mb-3">5. Blender Internal Render Engine</h2>
+                <img src="blender-render-toon.jpg" alt="blender render toon" class="mb-4 img-fluid rounded">
+                <p>
+                    The Blender Internal rendering engine, often referred to simply as "Blender Internal" or "Blender Render" (BR), was the original rendering engine used in Blender prior to version 2.80. It was designed to handle various rendering tasks such as shading, lighting, and rendering within the Blender interface itself.
+                </p>
+                <p>
+                    Blender Internal supported various rendering techniques including Raytracing, Ambient Occlusion, Shadows, Reflections, and Transparency.
+                    Blender Internal had its own material and texture system.
+                </p>
+                <p>
+                    EEVEE, which replaced Blender Internal, has a lot of things its predecessor didn’t. But it doesn’t have everything Blender Internal had either.
+                    Blender Internal had “halo” rendering<strong>, a built-in toon shader,</strong> and options for famous <strong>shading models used in computer graphics:</strong>
+                </p>
+                <ul>
+                    <li>Cook–Torrance</li>
+                    <li>Blinn–Phong</li>
+                    <li>Oren–Nayar</li>
+                    <li>Lambert</li>
+                </ul>
+                <p>
+                    Whereas in the current Blender, EEVEE has only the GGX and Multiscatter GGX shading models.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">6. Blender Game Engine</h2>
+                <img src="blender-game-engine-logic-bricks.png" alt="blender game engine" class="mb-4 img-fluid rounded">
+                <p>
+                    The Blender Game Engine (BGE) was a component of Blender that allowed users to create real-time interactive content, such as games and simulations, directly within the Blender environment.
+                </p>
+                <p>
+                    One of the distinctive features of the BGE was its visual programming system called "Logic Bricks." This system allowed users to create game logic by visually connecting logic bricks representing events, conditions, and actions. It was designed to be accessible to users without programming experience.
+                </p>
+                <p>
+                    In addition to Logic Bricks, the BGE supported scripting in Python. Users could extend and customize game logic and behavior by writing Python scripts that interacted with Blender's game engine components.
+                </p>
+                <p>
+                    The BGE included support for real-time physics simulation, allowing users to create interactive environments with realistic physics interactions such as collisions, gravity, and constraints.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">7. Hemisphere Light</h2>
+                <img src="old-blender-lights-include-hemi.png" alt="hemi lamp" class="mb-4 img-fluid rounded">
+                <p>
+                    In Blender, the Hemisphere Light was a type of light source that provided ambient lighting and soft shadows, particularly useful for simulating outdoor scenes or environments where indirect lighting was important. However, the Hemisphere Light was deprecated and removed from Blender starting from version 2.80 and onward.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">8. Musgrave Texture Node</h2>
+                <img src="musgrave-texture.png" alt="musgrave texture" class="mb-4 img-fluid rounded">
+                <p>
+                    The Musgrave texture node was replaced by the Noise Texture node, which includes all the same functionality.
+                </p>
+                <p>
+                    <a href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/texture/musgrave.html" rel="nofollow">Explanation</a>
+                </p>
+            </article>
+            <hr class="m-0">
+            <section id="subscribe-email-form" class="py-5 px-1">
+                <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed">
+                    <input type="hidden" name="seller_id" value="3186981960865"/>
+                    <div class="row g-3">
+                        <div class="col-auto flex-grow-1">
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value=""/>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button" onclick="trackButtonClick('email_subscribe')">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-muted text-center m-0">
+                    <small>You can unsubscribe anytime if you change your mind.</small>
+                </p>
+            </section>
+            <hr class="m-0">
+            <article class="py-4 mb-4">
+                <h2 class="mb-3">9. Sharp Glossy Shader Distribution</h2>
+                <img src="glossy-distribution-models.jpg" alt="glossy distributions" class="mb-4 img-fluid rounded">
+                <p>
+                    The sharp distribution setting of the Glossy BSDF shader was removed from Blender. It simply gave you a glossy shader with a roughness of 0. Because it is equivalent to that, its disappearance didn’t lose useful functionality from Blender’s Glossy BSDF shader.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">10. Scene Layers</h2>
+                <img src="layers.png" alt="blender layers" class="mb-4 img-fluid rounded">
+                <p>
+                    In Blender 2.80 and later versions, scene layers as they existed in earlier versions (up to 2.79) were replaced with Collections. This change was part of a broader reorganization and modernization effort in Blender's interface and workflow.
+                </p>
+                <p>
+                    In Blender versions prior to 2.80, the concept of scene layers involved organizing objects into up to 20 distinct layers. Each layer could be independently toggled on or off, allowing for selective visibility and management of objects within a scene. The layer system was somewhat limited in flexibility and didn't scale well for complex scenes or larger projects. It also didn’t support hierarchy, meaning objects couldn’t be grouped or organized beyond the 20 independent layers.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">11. Single-Sided Normals</h2>
+                <img src="double-sides-faces.png" alt="double-sided normals on or off" class="mb-4 img-fluid rounded">
+                <p>
+                    In Blender 2.80 onwards, double-sided normals are always-on by default.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">12. NLM Denoiser</h2>
+                <img src="nlm-denoiser.png" alt="NLM Denoiser" class="mb-4 img-fluid rounded">
+                <p>
+                    NLM was Blender’s non-AI denoiser. The NLM Denoiser was removed after the release of 2.93 becase AI denoising algorithms generally yield better results.
+                </p>
+                <hr class="my-4">
+                <h2 class="mb-3">13. Old Specular Tint and Sheen Tint Sliders</h2>
+                <img src="old-principled-tint.png" alt="Pre-4.0 Principled Shader Node" class="mb-4 img-fluid rounded">
+                <p>
+                    In Blender 4.0 and newer, Specular Tint and Sheen Tint are <em>color</em> inputs. They were sliders in earlier versions, which allowed for easily mixing a tint color between the albedo color and white. Now, this color mixing needs to be done using Mix Color nodes.
+                </p>
+            </article>
+        </div>
+        <section id='hero-blender' class="hero d-flex flex-column text-center text-md-start">
+            <div class="container mt-auto">
+                <div class="row my-5 row-cols-1 row-cols-md-2">
+                    <div class="col blurb">
+                        <h1 class="display-5">Take your Blender game to the next level.</h1>
+                        <p class="lead">
+                            Level up your creations and streamline your workflow with CG Meerkat’s Blender add-ons, node setups, and assets.
+                        </p>
+                        <a href="https://cgmeerkat.gumroad.com" class="btn btn-dark btn-lg" onclick="trackButtonClick('blog_artic_how_to_get_a_job_hero_all_products_gum')">All Products</a>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </section>
+        <div class="container">
+            <footer class="py-5 text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com" onclick="trackLinkClick('footer_gumroad')">Gumroad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D" onclick="trackLinkClick('footer_gum_blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/@CGmeerkat" onclick="trackLinkClick('footer_youtube')" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')" title="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <small>
+                    &copy; 2024 CG Meerkat
+                </small>
+            </footer>
+        </div>
+    </body>
+</html>

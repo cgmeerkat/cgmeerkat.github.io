@@ -35,3 +35,8 @@ article > .overlay {
     margin: 0 auto;
     display: block;
 }
+
+.list {
+    line-height: 2;
+    font-size: 1.125em;
+}

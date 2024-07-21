@@ -88,14 +88,14 @@
             <hr class="m-0">
             <section id="subscribe-email-form" class="py-5 px-1">
                 <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
-                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed">
-                    <input type="hidden" name="seller_id" value="3186981960865"/>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed" onsubmit="trackFormSubmit('email_subscribe')">
+                    <input type="hidden" name="seller_id" value="3186981960865">
                     <div class="row g-3">
                         <div class="col-auto flex-grow-1">
-                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value=""/>
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value="" required>
                         </div>
                         <div class="col-auto">
-                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button" onclick="trackButtonClick('email_subscribe')">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button">
                                 Follow
                             </button>
                         </div>
@@ -163,14 +163,14 @@
             <hr class="m-0">
             <section id="subscribe-email-form" class="py-5 px-1">
                 <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
-                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed">
-                    <input type="hidden" name="seller_id" value="3186981960865"/>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed" onsubmit="trackFormSubmit('email_subscribe')">
+                    <input type="hidden" name="seller_id" value="3186981960865">
                     <div class="row g-3">
                         <div class="col-auto flex-grow-1">
-                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value=""/>
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value="" required>
                         </div>
                         <div class="col-auto">
-                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button" onclick="trackButtonClick('email_subscribe')">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button">
                                 Follow
                             </button>
                         </div>

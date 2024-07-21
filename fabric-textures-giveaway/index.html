@@ -43,7 +43,7 @@
             <div class="container">
                 <a class="navbar-brand" href="/" onclick="trackLinkClick('navbar_brand_to_home')">
                     <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
-                    <span  class="d-inline-block pt-2 ms-2">CG Meerkat</span>
+                    <span class="d-inline-block pt-2 ms-2">CG Meerkat</span>
                 </a>
                 <a class="btn btn-outline-danger" href="https://cgmeerkat.gumroad.com" onclick="trackButtonClick('header_all_products')">All Products</a>
             </div>
@@ -90,10 +90,15 @@
                     </div>
                     <div class="col">
                         <div class="d-grid gap-2 mb-3">
-                            <a href="https://www.mediafire.com/file/ke22audvxfv8pp1/Free+Fabric+Textures+Download+·+CG+Meerkat.zip/file" class="btn btn-lg btn-success" onclick="trackButtonClick('download_textiles')">
+                            <!--a href="https://www.mediafire.com/file/ke22audvxfv8pp1/Free+Fabric+Textures+Download+·+CG+Meerkat.zip/file" class="btn btn-lg btn-success" onclick="trackButtonClick('download_textiles')">
                                 <i class="bi bi-file-earmark-arrow-down"></i>
                                 Download ZIP (78 MB)
-                            </a>
+                            </a-->
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-lg btn-success" data-bs-toggle="modal" data-bs-target="#email-download-modal">
+                                <i class="bi bi-file-earmark-arrow-down"></i>
+                                Download ZIP (78 MB)
+                            </button>
                         </div>
                         <div class="shadow-lg rounded card p-4">
                             <h3 class="mb-3" title="Preview">Sneak Peek</h3>
@@ -160,5 +165,45 @@
                 </small>
             </div>
         </footer>
+
+        <div class="modal" tabindex="-1" id="email-download-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><i class="bi bi-file-earmark-arrow-down"></i> Download Your Free Fabric Texture Pack</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="lead">Please enter your email address to access your download.</p>
+                        <form class="input-with-button m-0" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed" onsubmit="download()">
+                            <input type="hidden" name="seller_id" value="3186981960865">
+                            <div class="row g-3">
+                                <div class="col-auto flex-grow-1">
+                                    <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value="" required>
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" formtarget="_blank" class="btn btn-dark" id="gumroad-follow-form-embed-button">
+                                        <i class="bi bi-file-earmark-arrow-down"></i> Download
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer text-muted">
+                        <small>File Size: 78 MB</small>
+                        <br>
+                        <small>Number of Images: 9</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function download() {
+                trackFormSubmit('email_subscribe_and_download_zip_textiles');
+                //window.open("https://www.mediafire.com/file/ke22audvxfv8pp1/Free+Fabric+Textures+Download+·+CG+Meerkat.zip/file", "_blank");
+                setTimeout(()=>window.location.assign('https://www.mediafire.com/file/ke22audvxfv8pp1/Free+Fabric+Textures+Download+·+CG+Meerkat.zip/file'),0);
+                return true;
+            }
+        </script>
     </body>
 </html>

@@ -62,7 +62,7 @@
                         <i class="bi bi-box-arrow-up-right"></i>
                     </a>
                 </h2>
-                <ul class="list m-0">
+                <ul class="list mb-4">
                     <li>
                         <a href="https://cgmeerkat.gumroad.com/p/who-needs-a-tonemapper">Battle of Blender Tonemappers: AgMax Compared to Filmic, AgX, and Khronos PBR Neutral</a>
                     </li>
@@ -70,18 +70,21 @@
                         <a href="https://cgmeerkat.gumroad.com/p/new-release-8-textile-materials-blender-fabric-shader-nodes-pack">New Release: 8 Textile Materials (Blender Fabric Shader Nodes Pack)</a>
                     </li>
                 </ul>
+                <p class="text-muted m-0 text-center">
+                    A blog about Blender, digital art, 3D animation, and computer graphics.
+                </p>
             </div>
             <hr class="m-0">
             <section id="subscribe-email-form" class="py-5 px-1">
                 <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
-                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed">
-                    <input type="hidden" name="seller_id" value="3186981960865"/>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed" onsubmit="trackFormSubmit('email_subscribe')">
+                    <input type="hidden" name="seller_id" value="3186981960865">
                     <div class="row g-3">
                         <div class="col-auto flex-grow-1">
-                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value=""/>
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value="" required>
                         </div>
                         <div class="col-auto">
-                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button" onclick="trackButtonClick('email_subscribe')">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button">
                                 Follow
                             </button>
                         </div>

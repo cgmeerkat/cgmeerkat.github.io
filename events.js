@@ -18,3 +18,10 @@ function trackOtherClick(label) {
         'event_label': label,
     });
 }
+
+function trackFormSubmit(label) {
+    gtag('event', 'enter', {
+        'event_category': 'form_submit',
+        'event_label': label,
+    });
+}

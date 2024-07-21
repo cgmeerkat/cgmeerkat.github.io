@@ -1,6 +1,9 @@
 :root, html, body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
+
+    width: 100vw;
+    overflow-x: hidden;
 }
 .blurb {
     background-color: rgba(0,0,0,0.625);

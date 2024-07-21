@@ -36,7 +36,7 @@ article > .overlay {
     display: block;
 }
 
-.list {
-    line-height: 2;
+.list li {
     font-size: 1.125em;
+    margin-bottom: 0.375em;
 }

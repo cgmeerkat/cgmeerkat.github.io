@@ -30,6 +30,10 @@
             header {
                 min-height: 50vh;
             }
+            .showcase > .col {
+                width: 25%;
+                flex: 1 1 25%;
+            }
         </style>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
@@ -118,6 +122,64 @@
                         <img src="products/Ultimate-Compositor-Cavity.png" alt="Screen-Space Angular Cavity Compositor Node">
                     </div>
                 </div>
+            </div>
+        </section>
+        <section>
+            <div class="row g-0 showcase">
+                <div class="col">
+                    <a href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr" onclick="trackOtherClick('image_to_gumroad_metals')">
+                        <img class="w-100" src="products/15-Metals-with-Rust-and-Physically-Based-Fresnel-and-Surface-Imperfections-Is-PBR-Blender-Shader-Collection.jpg" alt="15 Metals with Rust and Physically Based Fresnel and Surface Imperfections Is PBR Blender Shader Collection">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://cgmeerkat.gumroad.com/l/blender-NiceGlass" onclick="trackOtherClick('image_to_gumroad_NiceGlass')">
+                        <img class="w-100" src="products/NiceGlass-Blender-Glass-Shader-with-Dispersion-and-Caustics.webp" alt="NiceGlass Blender Glass Shader with Dispersion and Caustics">
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials" onclick="trackOtherClick('image_to_gumroad_textiles_nodes')">
+                        <img class="w-100" src="products/Blender-Fabric-Material-Collection-8-Textile-Styles.webp" alt="Blender Fabric Material Collection 8 Textile Styles">
+                    </a>
+                </div>
+                <div class="col p-4 d-none d-xl-block" style="max-height: 25vw; overflow: hidden;">
+                    <h3>Shaders & Material Packs</h3>
+                    <p>
+                        At CG Meerkat, we make materials and textures to help Blender users make their best creations.
+                    </p>
+                    <a class="btn btn-lg btn-danger w-100 d-block mb-2" href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q==" onclick="trackButtonClick('gumroad_all_mats')">Browse Blender Materials</a>
+                    <a class="btn btn-outline-danger w-100 d-block mb-2" href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr" onclick="trackButtonClick('gumroad_metals')">Physically-Based Metals</a>
+                    <a class="btn btn-outline-danger w-100 d-block mb-2" href="https://cgmeerkat.gumroad.com/l/blender-NiceGlass" onclick="trackButtonClick('gumroad_NiceGlass')">Dispersive Glass</a>
+                    <a class="btn btn-outline-danger w-100 d-block" href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials" onclick="trackButtonClick('gumroad_textiles_nodes')">Cloth/Fabric/Textile Materials</a>
+                </div>
+            </div>
+            <div class="container d-block d-xl-none py-4">
+                <h3 class="text-center">Shaders & Material Packs</h3>
+                <ul class="list-group shadow-sm">
+                    <li class="list-group-item">
+                        <a class="text-dark text-decoration-none d-flex justify-content-between align-items-center" href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr" onclick="trackLinkClick('gumroad_metals')">
+                            <strong>Physically-Based Metals</strong>
+                            <span class="badge bg-danger rounded-pill"><i class="bi bi-chevron-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="text-dark text-decoration-none d-flex justify-content-between align-items-center" href="https://cgmeerkat.gumroad.com/l/blender-NiceGlass" onclick="trackLinkClick('gumroad_NiceGlass')">
+                            <strong>Dispersive Glass</strong>
+                            <span class="badge bg-danger rounded-pill"><i class="bi bi-chevron-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class="text-dark text-decoration-none d-flex justify-content-between align-items-center" href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials" onclick="trackLinkClick('gumroad_textiles_nodes')">
+                            <strong>Cloth/Fabric/Textile Materials</strong>
+                            <span class="badge bg-danger rounded-pill"><i class="bi bi-chevron-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q==" onclick="trackLinkClick('gumroad_all_mats')">
+                            <span>Browse All</span>
+                            <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
         <section class="product bg-dark text-white">

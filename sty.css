@@ -103,3 +103,7 @@ hr {
 img-comparison-slider {
     cursor: ew-resize;
 }
+
+:not(.gumroad-button) .logo-full {
+    display: none;
+}

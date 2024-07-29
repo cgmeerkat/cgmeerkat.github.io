@@ -107,3 +107,7 @@ img-comparison-slider {
 :not(.gumroad-button) .logo-full {
     display: none;
 }
+
+.list-group-item {
+    line-height: 1.375 !important;
+}

@@ -71,4 +71,23 @@
         <loc>https://cgmeerkat.github.io/blog/13-features-removed-from-blender/</loc>
         <priority>0.9</priority>
     </url>
-</urlset> 
+    <url>
+        <loc>https://cgmeerkat.github.io/blog/is-blender-hardops-addon-worth-it/</loc>
+        <priority>0.9</priority>
+        <image:image>
+            <image:loc>https://cgmeerkat.github.io/blog/is-blender-hardops-addon-worth-it/metals.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cgmeerkat.github.io/blog/is-blender-hardops-addon-worth-it/origin-wrangler/axis-specific.gif</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cgmeerkat.github.io/blog/is-blender-hardops-addon-worth-it/origin-wrangler/bounds.gif</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cgmeerkat.github.io/blog/is-blender-hardops-addon-worth-it/origin-wrangler/selected-geometry.gif</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cgmeerkat.github.io/blog/is-blender-hardops-addon-worth-it/origin-wrangler/smart-align-bulk.gif</image:loc>
+        </image:image>
+    </url>
+</urlset>

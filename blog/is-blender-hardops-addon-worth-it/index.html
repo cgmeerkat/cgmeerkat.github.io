@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-JD06LE35DS"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-JD06LE35DS');
+        </script>
+
+    	<meta charset='utf-8'>
+    	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
+
+        <title>Is the Blender Hard Ops Add-on Worth Buying? Hard-Surface Modeling Using Hard Ops Versus Vanilla Blender | CG Meerkat Blog</title>
+        <meta name="description" content="How you can get hired in the 3D animation industry by creating the best portfolio">
+
+        <link rel="icon" href="/logo.jpg">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../../sty.css">
+        <link rel="stylesheet" href="../blog.css">
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+        <script src="/events.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header class="navbar navbar-light">
+                <div class="container justify-content-center">
+                    <a class="navbar-brand" href="/blog/" onclick="trackLinkClick('navbar_brand_to_blog_directory')">
+                        <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
+                        <span class="d-inline-block pt-2 ms-2 text-danger">CG Meerkat</span>
+                    </a>
+                </div>
+            </header>
+            <article class="py-4 mt-4">
+                <div class="text-center mb-4">
+                    <h1><strong>Is the Blender <em>Hard Ops + Boxcutter</em> Bundle Worth Buying?</strong> Hard-Surface Modeling Using <em>Hard Ops</em> and <em>Boxcutter</em> Versus Vanilla Blender</h1>
+                    <p class="lead text-muted m-0">28 July 2024</p>
+                </div>
+                <p class="mb-4">
+                    Hard Ops is one of the most popular Blender add-ons, now sold in a bundle with the Boxcutter add-on, which has amassed 39900 sales on BlenderMarket. I’ve been a Blender user for about 6 years, and during most of that time, I only used the stock add-ons that came with Blender. I think Hard Ops and Boxcutter are great add-ons, super useful and time-saving, and are totally worth the price. <em class="text-muted">This article is not sponsored nor an advertisement for Hard Ops / Boxcutter.</em>
+                </p>
+                
+                <div class="embed ratio ratio-16x9 mx-auto mb-1">
+                    <iframe class="embed-responsive-item rounded" src="https://www.youtube-nocookie.com/embed/KqJ3X8EiPGw?si=gs5fxzUQz_Vyaw47" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <p class="text-center mb-4">
+                    <small>A comprehensive Hard Ops overview video made by its developer.</small>
+                </p>
+
+                <ul class="list-group shadow-sm mb-4">
+                    <li class="list-group-item">
+                        <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://blendermarket.com/products/hard-ops--boxcutter-ultimate-bundle">
+                            <strong>BlenderMarket: Hard Ops + Boxcutter (Hopscutter) Bundle</strong>
+                            <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                    </li>
+                    <li class="list-group-item">
+                        <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://blendermarket.com/posts/jerry-perkins-on-creating-hardops-for-blender-keystrokes-and-clicks-are-my-enemy">
+                            <span>BlenderMarket: Jerry Perkins on Creating HardOps for Blender</span>
+                            <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+
+                <h3>Overview: What does Hard Ops do?</h3>
+                <p>
+                    Hard Ops is an add-on developed by <a href="http://masterxeon1001.com">MasterXeon1001</a> aimed at making the hard surface modeling workflow in Blender more efficient and flexible.
+                </p>
+                <h5>Key Features</h5>
+                <ul>
+                    <li><strong>Modeling Tools:</strong> Provides advanced tools for creating and manipulating hard surface models, such as boolean operations, mesh cleaning, and edge control.</li>
+                    <li><strong>Workflow Enhancements:</strong> Offers features like quick mesh creation, beveling, and shading tools, which speed up the modeling process.</li>
+                    <li><strong>Non-Destructive Modeling:</strong> Facilitates a non-destructive workflow with modifiers and boolean operations, allowing you to make changes without permanently altering the base mesh.</li>
+                    <li><strong>Customizability:</strong> Includes a range of custom tools and settings that can be tailored to fit your specific modeling needs and preferences.</li>
+                </ul>
+
+
+                <h3>Overview: What does Boxcutter do?</h3>
+                <p>
+                    Boxcutter is another add-on, made by the same developer, designed to simplify the process of cutting complex shapes and boolean operations in Blender.
+                </p>
+                <h5>Key Features</h5>
+                <ul>
+                    <li><strong>Cutting Tools:</strong> Provides intuitive tools for cutting and carving shapes directly into your model. It’s especially useful for creating detailed and intricate cuts.</li>
+                    <li><strong>Boolean Operations:</strong> Integrates closely with Blender's boolean operations, allowing for precise and clean cuts and intersections.</li>
+                    <li><strong>User-Friendly Interface:</strong> Features an easy-to-use interface that makes complex cutting operations more accessible, even for users who might be new to hard surface modeling.</li>
+                    <li><strong>Speed and Efficiency:</strong> Focuses on speeding up the process of creating complex shapes and details, enhancing productivity in your modeling workflow.</li>
+                </ul>
+
+                <h3><strong>The Difference</strong></h3>
+                <p class="m-0">
+                    In a nutshell, Hard Ops does management and provides a varied toolset for all sorts of modeling operations, whereas Boxcutter specializes in boolean operations as an advanced tool for performing booleans efficiently.
+                </p>
+
+            </article>
+            <hr class="m-0">
+            <section id="subscribe-email-form" class="py-5 px-1">
+                <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed" onsubmit="trackFormSubmit('email_subscribe')">
+                    <input type="hidden" name="seller_id" value="3186981960865">
+                    <div class="row g-3">
+                        <div class="col-auto flex-grow-1">
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value="" required>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-muted text-center m-0">
+                    <small>You can unsubscribe anytime if you change your mind.</small>
+                </p>
+            </section>
+            <hr class="m-0">
+            <article class="py-4">
+                <h3><strong>How exactly is using Hard Ops and Boxcutter different from using the boolean and bevel modifiers that Blender has out of the box?</strong></h3>
+                <p>
+                    The main modeling features that Hard Ops and Boxcutter are best known for build on top of operations and modifiers that Blender already has. But Hard Ops and Boxcutter make them much faster to do by saving the user clicks and time. Over time, the add-ons save the artist significant amounts of time and reduce fatigue from repeated keystrokes and button-pressing.
+                </p>
+
+                <h4>Booleans</h4>
+                <p>
+                    In stock Blender, to do a boolean—for instance, cutting a circular inset/depression into 1 face of a cube, you have to create a cylinder, add a boolean modifier to the cube, set the boolean modifier’s type to "difference", and assign the boolean modifier’s object to the cylinder.
+                </p>
+                <p>
+                    In hard-surface modeling workflows, booleans are extremely common. It’s not uncommon to use 10+ booleans in a hard surface modeling project. And the time it takes to set up every single boolean modifier manually adds up.
+                </p>
+                <p>
+                    Contrast that tedious workflow to the far more streamlined Boxcutter workflow. Boxcutter allows you to draw or "drag out" a shape that you want to cut into a mesh that you’re editing, and it sets up your modifiers for you, saving you time.
+                </p>
+                <p>
+                    In Hard Ops, you have an "everscroll" feature that lets you scroll through the other objects that are booleaning the active object, and you can apply any boolean by pressing the <kbd>F</kbd> key. Saves time.
+                </p>
+                <p>
+                    Boxcutter has boolean types such as <strong>slice</strong> and <strong>inset</strong> that Blender doesn’t. The inset boolean type is like Blender’s face inset operation but as a boolean. Super useful.
+                </p>
+
+                <h4>Edge Data</h4>
+                <p>
+                    Blender has different types of edge data: sharp normals, edge creases, UV seams, and bevel weights. In stock Blender, they need to be set seperately.
+                </p>
+                <p>
+                    In Hard Ops, multiple or all of these edge data types can be set to be edited simultaneously. Very useful.
+                </p>
+
+                <h4>Modifer Management</h4>
+                <p>
+                    In stock Blender, modifiers are ordered manually. Hard surface modeling workflows often use lots and lots of modifiers, and manually ordering long stacks of them can get tedious.
+                </p>
+                <p>
+                    Hard Ops lets you specify a sort order for your modifiers. For example, boolean then bevel then subdivision. Super useful. In a boolean workflow, you don’t need to sift through long stacks of modifiers and re-order the modifiers each time you add new ones.
+                </p>
+                <p class="m-0">
+                    Hard Ops has lots and lots of handy quality-of-life time-saving functions that add up. Hard Ops lets you apply all modifiers of specific types, e.g. all of an object’s boolean modifiers. This feature saves time when you have lots of boolean modifiers and you want to keep a bevel modifier and a weighted normals modifer at the end of the stack.
+                </p>
+
+                <hr class="my-4">
+
+                <p class="m-0">
+                    If you do hard-surface modeling in Blender, you probably use <a href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr">metallic materials</a> and <a href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr">surface imperfections or grunge textures</a> on the models you create. Consider trying out CG Meerkat’s shader pack of <strong>15 physically based metal materials</strong> (created based on <a href="https://refractiveindex.info">scientific measurements</a> of physical metals) that has <strong>rust/corrosion/tarnish</strong> built in and comes with 5 surface imperfection/grunge textures that add touches of realism to hard-surface materials like <a href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr">metal</a>, plastic, and <a href="https://cgmeerkat.gumroad.com/l/blender-NiceGlass">glass.</a>
+                </p>
+            </article>
+        </div>
+        <section class="bg-primary text-white py-4 text-center" style="background-image: url(metals.webp);">
+            <div class="container">
+                <h3 class="display-5">Get <a href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr" class="text-white" onclick="trackLinkClick('promo_metals_to_gumroad')">PBR Metal Materials & Hard Surface Imperfections Textures Collection</a> 25% Off</h3>
+                <p class="lead">
+                    Use Discount Code <a href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr" class="no-underline" onclick="trackLinkClick('promo_kbd_discount_code_to_gumroad_metals')"><kbd><code class="text-warning">complexIOR</code></kbd></a>
+                </p>
+                <small>Discount Code Valid Until 1 January 2025</small>
+            </div>
+        </section>
+        <div class="container">
+            <article class="py-4">
+                <h2>The UI</h2>
+                <p>
+                    Hard Ops’s and Boxcutter’s interfaces are well-organized, easy-to-use, and designed for efficiency. Many users underrate the difference that UI can make to the speed and experience of their work processes. I’ll show you how Hard Ops’s and Boxcutter’s UIs saves artists clicks and time.
+                </p>
+
+                <h4>Boxcutter UI</h4>
+                <img src="boxcutter-ui.jpg" alt="boxcutter ui" class="mb-3 img-fluid rounded">
+                <p>
+                    As you can see in the screenshot, Boxcutter has lots of settings that make it so much more powerful than Blender’s stock boolean modifiers, and its settings are all consolidated into one popup window—to perform these operations in Blender’s stock UI involves navigating through multiple tabs and panels. By putting these in one place, Boxcutter streamlines the modeling workflow.
+                </p>
+
+                <h4>Hard Ops UI</h4>
+                <img src="hardops-ui.jpg" alt="boxcutter ui" class="mb-3 img-fluid rounded">
+                <p class="m-0">
+                    HardOps, like Boxcutter (they are developed by the same developer), provides a plethora of options to assist you with modeling, managing modifiers, and more. The screenshot shows the "Hops Helper" menu. Not all the options are in this menu; Hard Ops puts common options at the top of the viewport for quick access during mesh editing.
+                </p>
+
+            </article>
+            <hr class="m-0">
+            <section id="subscribe-email-form" class="py-5 px-1">
+                <h5 class="text-center mb-4 text-muted">Subscribe to CG Meerkat</h5>
+                <form class="input-with-button mb-3" action="https://app.gumroad.com/follow_from_embed_form" method="post" id="gumroad-follow-form-embed" onsubmit="trackFormSubmit('email_subscribe')">
+                    <input type="hidden" name="seller_id" value="3186981960865">
+                    <div class="row g-3">
+                        <div class="col-auto flex-grow-1">
+                            <input class='form-control' id="gumroad-follow-form-embed-input" type="email" placeholder="Your email address" name="email" value="" required>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn btn-dark" type="submit" id="gumroad-follow-form-embed-button">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-muted text-center m-0">
+                    <small>You can unsubscribe anytime if you change your mind.</small>
+                </p>
+            </section>
+            <hr class="m-0">
+            <article class="py-4 mb-4">
+                <h2>Are Hard Ops and Boxcutter worth buying?</h2>
+                <p>
+                    IMHO, Hard Ops and Boxcutter are definitely worth purchasing. The duo are even more useful than they seem. While they have a learning curve (e.g. learning the hotkeys), the amount of time they save the artist enable modelers to get things done faster, and they pay off. The advanced features they provide that aren’t in vanilla Blender will help you take your hard surface models to a higher level of complexity and quality without a headache. Hard Ops and Boxcutter are utterly outstanding, powerful Blender add-ons.
+                </p>
+                <p>
+                    If you’re looking for tutorials on Hard Ops and Boxcutter, <a href="https://www.youtube.com/channel/UCXfGjwohMgPm4Ng2e1FXySw">Josh Gambrell</a> has free tutorial/guide videos on YouTube and a hard surface modeling course using Hard Ops and Boxcutter.
+                </p>
+                <ul class="list-group shadow-sm m-0">
+                    <li class="list-group-item">
+                        <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://www.youtube.com/channel/UCXfGjwohMgPm4Ng2e1FXySw">
+                            <span>YouTube: Josh Gambrell</span>
+                            <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </article>
+
+            <div class="card shadow-sm p-4 mb-5 bg-gradient-light-cyan">
+                <p class="lead">
+                    <i class="bi bi-info-circle text-info me-2"></i>
+                    If you do hard-surface modeling in Blender, consider trying our add-on <em>Origin Wrangler</em> to efficiently set and align object origins.
+                </p>
+                <div class="row row-cols-1 row-cols-lg-2">
+                    <div class="col mb-3">
+                        <img class="a img-fluid rounded" src="origin-wrangler/smart-align-bulk.gif" alt="Blender Origin Wrangler Add-on">
+                        <img class="b img-fluid rounded" src="origin-wrangler/selected-geometry.gif" alt="Blender Origin Wrangler Add-on">
+                    </div>
+                    <div class="col mb-3">
+                        <img class="a img-fluid rounded" src="origin-wrangler/bounds.gif" alt="Blender Origin Wrangler Add-on">
+                        <img class="b img-fluid rounded" src="origin-wrangler/axis-specific.gif" alt="Blender Origin Wrangler Add-on">
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="https://cgmeerkat.gumroad.com/l/blender-origin-wrangler" class="btn btn-info" onclick="trackButtonClick('blog_artic_infobox_Origin_Wrangler')">Get Origin Wranger</a>
+                    <a href="https://cgmeerkat.gumroad.com" class="btn btn-outline-dark" onclick="trackButtonClick('blog_artic_infobox_all_products_gum')">All Products</a>
+                </div>
+            </div>
+
+            <h3 class="text-center">More About Hard Ops, Boxcutter, and Other Hard Surface Modeling Tools</h3>
+            <ul class="list-group shadow-sm mb-5">
+                <li class="list-group-item">
+                    <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://www.reddit.com/r/blender/comments/eltk0s/opinions_on_hard_ops_addon">
+                        <span>Reddit: Opinions on Hard Ops Addon</span>
+                        <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://www.reddit.com/r/blender/comments/y4p4qa/is_boxcutter_and_hardops_worth_it">
+                        <span>Reddit: Are Boxcutter and Hard Ops worth it?</span>
+                        <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://blenderartists.org/t/someone-explain-to-me-the-difference-between-hard-ops-box-cutter-mesh-machine-and-machine-tools/1421200">
+                        <span>Blender Artists: Differences between Hard Ops, Boxcutter, Mesh Machine, and Machine Tools</span>
+                        <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a class='text-dark text-decoration-none d-flex justify-content-between align-items-center' href="https://blenderartists.org/t/hard-surface-helpers-boxcutter-vs-meshmachine-vs-fluent-vs-speedflow/1148012">
+                        <span>Blender Artists: Hard Surface Helpers: Boxcutter vs Mesh Machine vs Fluent vs Speedflow</span>
+                        <span class="badge bg-danger rounded-pill"><i class="bi bi-box-arrow-up-right"></i></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <section id='hero-blender' class="hero d-flex flex-column text-center text-md-start">
+            <div class="container mt-auto">
+                <div class="row my-5 row-cols-1 row-cols-md-2">
+                    <div class="col blurb">
+                        <h1 class="display-5">Take your Blender game to the next level.</h1>
+                        <p class="lead">
+                            Level up your creations and streamline your workflow with CG Meerkat’s Blender add-ons, node setups, and assets.
+                        </p>
+                        <a href="https://cgmeerkat.gumroad.com" class="btn btn-dark btn-lg" onclick="trackButtonClick('blog_artic_how_to_get_a_job_hero_all_products_gum')">All Products</a>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>
+        </section>
+        <div class="container pt-3">
+            <aside class="text-muted">
+                <small>
+                    Are Hard Ops and Boxcutter worth buying?
+                </small>
+            </aside>
+            <footer class="py-5 text-center">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com" onclick="trackLinkClick('footer_gumroad')">Gumroad</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D" onclick="trackLinkClick('footer_gum_blog')">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/@CGmeerkat" onclick="trackLinkClick('footer_youtube')" title="YouTube">
+                            <i class="bi bi-youtube"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://x.com/CGMeerkat" onclick="trackLinkClick('footer_twitter')" title="Twitter">
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <small>
+                    &copy; 2024 CG Meerkat
+                </small>
+            </footer>
+        </div>
+        <script src="../../random.js"></script>
+    </body>
+</html>

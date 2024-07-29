@@ -29,7 +29,7 @@ article > .overlay {
 .overlay a {
     text-decoration: none;
 }
-.img-fluid {
+.img-fluid, .embed {
     width: 100%;
     max-width: 65vh;
     margin: 0 auto;

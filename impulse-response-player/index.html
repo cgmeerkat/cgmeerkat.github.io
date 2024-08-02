@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Impulse Response Player | CG Meerkat</title>
+
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            :root, html {
+                font-family: sans-serif;
+                background: linear-gradient(to bottom,dodgerblue,deepskyblue);
+                min-height: 100vh;
+                position: relative;
+                line-height: 1.5;
+            }
+            body {
+                min-height: calc(100vh - 2rem);
+                margin: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            main {
+                width: 100%;
+                max-width: 50rem;
+                padding: 2rem 2.5rem;
+                background: white;
+                border-radius: 1.25rem;
+                box-shadow: 0 0 2.5rem -1.25rem black;
+            }
+            hr {
+                height: 0;
+                border-width: 1px 0 0 0;
+                border-color: silver;
+                border-style: dotted;
+                margin: 1rem 0;
+            }
+            h1, h2, h3 {
+                margin: 0;
+                line-height: 1.25;
+                font-weight: 300;
+            }
+            audio, input[type='file'] {
+                display: block;
+                width: 100%;
+            }
+            input[type='file'] {
+                background-color: #f1f3f4;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                margin-top: .5rem;
+            }
+            .mb-2 {
+                margin-bottom: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Impulse Response Player</h1>
+            <hr>
+            <div class="mb-2">
+                <button onclick="start()">Start Audio Context</button>
+            </div>
+            <div id="note">
+                This button must be clicked for audio to work.
+            </div>
+            <hr>
+            <h2>Impulse Response</h2>
+            <input type="file" id="uploader-kernel" onchange="setIR(event)">
+            <hr>
+            <h2>Audio to Play</h2>
+            <input type="file" id="uploader-track" onchange="setTrack(event)">
+            <hr>
+            <div class="mb-2">
+                <audio id="audio" controls></audio>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" id='check-bypass' onchange="toggleConvolver()" checked>
+                    Enable Convolution
+                </label>
+            </div>
+        </main>
+        <script>
+            'use strict';
+            const audioElement = document.getElementById('audio');
+            const uploaderKernel = document.getElementById('uploader-kernel');
+            const uploaderTrack = document.getElementById('uploader-track');
+            const checkboxBypass = document.getElementById('check-bypass');
+
+            var audioContext, convolver, track;
+            function start() {
+                audioContext = new AudioContext();
+                track = audioContext.createMediaElementSource(audioElement);
+                convolver = audioContext.createConvolver();
+                track.connect(convolver);
+                convolver.connect(audioContext.destination);
+
+                document.getElementById('note').innerHTML = 'Success.'
+            }
+            function setTrack(e) {
+                const files = e.target.files;
+                audioElement.src = URL.createObjectURL(files[0]);
+                audioElement.load();
+            }
+            function setIR(e) {
+                const files = e.target.files;
+                const URLblob = URL.createObjectURL(files[0]);
+                fetch(URLblob)
+                    .then(response => response.arrayBuffer())
+                    .then(buffer => audioContext.decodeAudioData(buffer))
+                    .then(decodedData => {
+                        convolver.buffer = decodedData;
+                    });
+            }
+            function toggleConvolver() {
+                if (checkboxBypass.checked) {
+                    track.disconnect(audioContext.destination);
+                    track.connect(convolver);
+                    convolver.connect(audioContext.destination);
+                } else {
+                    convolver.disconnect(audioContext.destination);
+                    track.connect(audioContext.destination);
+                }
+            }
+        </script>
+    </body>
+</html>

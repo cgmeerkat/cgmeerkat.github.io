@@ -90,4 +90,8 @@
             <image:loc>https://cgmeerkat.github.io/blog/is-blender-hardops-addon-worth-it/origin-wrangler/smart-align-bulk.gif</image:loc>
         </image:image>
     </url>
+    <url>
+        <loc>https://cgmeerkat.github.io/impulse-response-player/</loc>
+        <priority>0.1</priority>
+    </url>
 </urlset>

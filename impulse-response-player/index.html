@@ -1,19 +1,30 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Impulse Response Player | CG Meerkat</title>
+    	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1">
 
+        <title>Impulse Response Player | CG Meerkat</title>
+        
+        <link rel="icon" href="/logo.jpg">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
         <style>
             * {
                 box-sizing: border-box;
             }
             :root, html {
-                font-family: sans-serif;
+                font-family: 'Barlow', sans-serif;
                 background: linear-gradient(to bottom,dodgerblue,deepskyblue);
                 min-height: 100vh;
                 position: relative;
                 line-height: 1.5;
+                color: #234;
             }
             body {
                 min-height: calc(100vh - 2rem);
@@ -21,6 +32,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-direction: column;
             }
             main {
                 width: 100%;
@@ -28,8 +40,13 @@
                 padding: 2rem 2.5rem;
                 background: white;
                 border-radius: 1.25rem;
+                transition: box-shadow 0.5s;
+                box-shadow: 0 0 0 0 rgba(0,0,0,0);
+            }
+            main:hover {
                 box-shadow: 0 0 2.5rem -1.25rem black;
             }
+
             hr {
                 height: 0;
                 border-width: 1px 0 0 0;
@@ -55,38 +72,71 @@
             .mb-2 {
                 margin-bottom: 0.5rem;
             }
+
+            main, footer {
+                margin-top: auto;
+            }
+
+            footer {
+                padding-top: 1rem;
+                text-align: center;
+            }
+            footer a {
+                color: rgba(255,255,255,0.75);
+                margin: 0 0.5rem;
+                transition: color 0.2s;
+                text-decoration: none;
+                border-bottom: 2px solid;
+                padding: 0.125rem;
+                display: inline-block;
+            }
+            footer:hover a {
+                color: rgba(255,255,255,0.875);
+            }
+            footer a:hover {
+                color: white;
+            }
         </style>
     </head>
     <body>
         <main>
-            <h1>Impulse Response Player</h1>
+            <h1><i class="bi bi-soundwave"></i> Impulse Response Player</h1>
             <hr>
             <div class="mb-2">
-                <button onclick="start()">Start Audio Context</button>
+                <button onclick="start()" id="btn-start">Start Audio Context</button>
             </div>
             <div id="note">
                 This button must be clicked for audio to work.
             </div>
-            <hr>
-            <h2>Impulse Response</h2>
-            <input type="file" id="uploader-kernel" onchange="setIR(event)">
-            <hr>
-            <h2>Audio to Play</h2>
-            <input type="file" id="uploader-track" onchange="setTrack(event)">
-            <hr>
-            <div class="mb-2">
-                <audio id="audio" controls></audio>
-            </div>
-            <div>
-                <label>
-                    <input type="checkbox" id='check-bypass' onchange="toggleConvolver()" checked>
-                    Enable Convolution
-                </label>
+            <div hidden>
+                <hr>
+                <h2><i class="bi bi-file-music"></i> Impulse Response</h2>
+                <input type="file" id="uploader-kernel" onchange="setIR(event)">
+                <hr>
+                <h2><i class="bi bi-file-music"></i> Audio to Play</h2>
+                <input type="file" id="uploader-track" onchange="setTrack(event)">
+                <hr>
+                <div class="mb-2">
+                    <audio id="audio" controls></audio>
+                </div>
+                <div>
+                    <label>
+                        <input type="checkbox" id='check-bypass' onchange="toggleConvolver()" checked>
+                        Enable Convolution
+                    </label>
+                </div>
             </div>
         </main>
+        <footer>
+            <a href="/" title="Home"><i class="bi bi-house-door-fill"></i></a>
+            <a href="https://www.youtube.com/watch?v=ryuO1TvM370"><i class="bi bi-play-btn-fill"></i> Tutorial</a>
+            <a href="https://cgmeerkat.gumroad.com/l/CycleAcoustics"><i class="bi bi-star-half"></i> Write a Review</a>
+            <a href="https://github.com/cgmeerkat/blender-addons-issues/issues"><i class="bi bi-bug-fill"></i> Report Bug</a>
+        </footer>
         <script>
             'use strict';
             const audioElement = document.getElementById('audio');
+            const btnStart = document.getElementById('btn-start');
             const uploaderKernel = document.getElementById('uploader-kernel');
             const uploaderTrack = document.getElementById('uploader-track');
             const checkboxBypass = document.getElementById('check-bypass');
@@ -99,7 +149,10 @@
                 track.connect(convolver);
                 convolver.connect(audioContext.destination);
 
-                document.getElementById('note').innerHTML = 'Success.'
+                document.getElementById('note').innerHTML = 'Success.';
+
+                document.querySelector('[hidden]').removeAttribute('hidden');
+                btnStart.setAttribute('disabled', true);
             }
             function setTrack(e) {
                 const files = e.target.files;

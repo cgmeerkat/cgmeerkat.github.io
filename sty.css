@@ -111,3 +111,7 @@ img-comparison-slider {
 .list-group-item {
     line-height: 1.375 !important;
 }
+
+.small {
+    font-size: 75%;
+}

@@ -109,6 +109,8 @@
                 color: white;
             }
         </style>
+
+        <script src="/events.js"></script>
     </head>
     <body>
         <main>
@@ -140,10 +142,10 @@
             </div>
         </main>
         <footer>
-            <a href="/" title="Home"><i class="bi bi-house-door-fill"></i></a>
-            <a href="https://www.youtube.com/watch?v=ryuO1TvM370"><i class="bi bi-play-btn-fill"></i> Tutorial</a>
-            <a href="https://cgmeerkat.gumroad.com/l/CycleAcoustics"><i class="bi bi-star-half"></i> Write a Review</a>
-            <a href="https://github.com/cgmeerkat/blender-addons-issues/issues"><i class="bi bi-bug-fill"></i> Report Bug</a>
+            <a href="/" title="Home" onclick="trackLinkClick('ir_player_footer_to_root')"><i class="bi bi-house-door-fill"></i></a>
+            <a href="https://www.youtube.com/watch?v=ryuO1TvM370" onclick="trackLinkClick('ir_player_footer_to_YouTube_CycleAcoustics')"><i class="bi bi-play-btn-fill"></i> Tutorial</a>
+            <a href="https://cgmeerkat.gumroad.com/l/CycleAcoustics" onclick="trackLinkClick('ir_player_footer_to_gumroad_CycleAcoustics')"><i class="bi bi-star-half"></i> Write a Review</a>
+            <a href="https://github.com/cgmeerkat/blender-addons-issues/issues" onclick="trackLinkClick('ir_player_footer_to_gh_issues')"><i class="bi bi-bug-fill"></i> Report Bug</a>
         </footer>
         <script>
             'use strict';

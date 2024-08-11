@@ -38,10 +38,10 @@ footer .nav {
 }
 
 body:not(.b) .b {
-    display: none;
+    display: none !important;
 }
 body.b .a {
-    display: none;
+    display: none !important;
 }
 
 .condense, .condense * {
@@ -114,4 +114,15 @@ img-comparison-slider {
 
 .small {
     font-size: 75%;
+}
+
+.btn-orange {
+    background-color: rgb(255, 96, 0);
+    color: white !important;
+}
+.btn-orange:hover {
+    background-color: darkorange;
+}
+.btn-orange:active {
+    background-color: orangered;
 }

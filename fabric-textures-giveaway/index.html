@@ -45,7 +45,17 @@
                     <img src="/logo.jpg" alt="CG Meerkat logo" width="50" height="50" class="d-inline-block align-top rounded-circle">
                     <span class="d-inline-block pt-2 ms-2">CG Meerkat</span>
                 </a>
-                <a class="btn btn-outline-danger" href="https://cgmeerkat.gumroad.com" onclick="trackButtonClick('header_all_products')">All Products</a>
+                <!--a class="btn btn-outline-danger" href="https://cgmeerkat.gumroad.com">All Products</a-->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" onclick="trackButtonClick('header_all_products')">
+                        All Products
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="https://blendermarket.com/creators/cgmeerkat">Blender Market</a></li>
+                        <li><a class="dropdown-item" href="https://cgmeerkat.gumroad.com">Gumroad</a></li>
+                        <li><a class="dropdown-item" href="https://www.youtube.com/@CGMeerkat">YouTube</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
         <article class="py-5">
@@ -121,7 +131,9 @@
                         </p>
                         <div class="d-grid gap-2 mb-2">
                             <a class="btn btn-lg btn-warning fw-bold" href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials" onclick="trackButtonClick('gumroad_textiles_nodes')">Get It from Gumroad</a>
-                            
+                        </div>
+                        <div class="d-grid gap-2 mb-2">
+                            <a class="btn btn-lg btn-orange fw-bold" href="https://blendermarket.com/products/textile-fabrics" onclick="trackButtonClick('gumroad_textiles_nodes')">Get It from Blender Market</a>
                         </div>
                         <div class="row row-cols-1 row-cols-lg-2 g-2">
                             <div class="col">

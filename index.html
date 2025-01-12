@@ -26,14 +26,20 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <link rel="stylesheet" href="sty.css">
+
+        <link rel="preload" href="blender-motion-picture-scape.webp" as="image" type="image/webp">
+        <link rel="preload" href="blender-motion-picture-mech.webp" as="image" type="image/webp">
         <style>
             main {
                 min-height: calc((100vh - 4.75rem));
                 --bs-gutter-x: 0;
                 --bs-gutter-y: 0;
             }
-            #blender {
-                background-image: url(wireframe.jpg);
+            #blender.bg1 {
+                background-image: url(blender-motion-picture-mech.webp);
+            }
+            #blender.bg2 {
+                background-image: url(blender-motion-picture-scape.webp);
             }
             #textiles-pack {
                 background-image: url(satin.webp);
@@ -56,7 +62,7 @@
             </div>
         </nav>
         <main class="row row-cols-1 row-cols-md-2 text-white g-0">
-            <section class="col bg-primary d-flex flex-column justify-content-end" id="blender">
+            <section class="col bg-primary d-flex flex-column justify-content-end bg2" id="blender">
                 <div class="m-5 blurb">
                     <h1 class="display-4">Level up your Blender workflow.</h1>
                     <p class="lead">
@@ -133,5 +139,11 @@
             </div>
         </footer>
         <script src="random.js"></script>
+
+        <script>
+            if (Math.random() < 0.5) {
+                document.getElementById('blender').classList.replace('bg2','bg1');
+            }
+        </script>
     </body>
 </html>

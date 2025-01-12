@@ -8,12 +8,18 @@
             <image:loc>https://cgmeerkat.github.io/logo.jpg</image:loc>
         </image:image>
         <image:image>
-            <image:loc>https://cgmeerkat.github.io/wireframe.jpg</image:loc>
+            <image:loc>https://cgmeerkat.github.io/blender-motion-picture-mech.webp</image:loc>
+        </image:image>
+        <image:image>
+            <image:loc>https://cgmeerkat.github.io/blender-motion-picture-scape.webp</image:loc>
         </image:image>
     </url>
     <url>
         <loc>https://cgmeerkat.github.io/blender/</loc>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://cgmeerkat.github.io/blender/products/AgMax.webp</image:loc>
+        </image:image>
         <image:image>
             <image:loc>https://cgmeerkat.github.io/blender/products/Origin-Wrangler.webp</image:loc>
         </image:image>

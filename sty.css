@@ -124,5 +124,16 @@ img-comparison-slider {
     background-color: darkorange;
 }
 .btn-orange:active {
-    background-color: orangered;
+    background-color: orangered !important;
+}
+
+.btn-purple {
+    background-color: #662d91;
+    color: white !important;
+}
+.btn-purple:hover {
+    background-color: #800080;
+}
+.btn-purple:active {
+    background-color: #4B0082 !important;
 }

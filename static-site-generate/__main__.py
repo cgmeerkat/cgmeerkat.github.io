@@ -7,7 +7,7 @@ from . import copy_static, html_templates, distribute_rendered_html
 TEMPLATES_DIR = 'templates'
 TEMPLATES_PAGES_SUBDIR = 'public'
 STATIC_DIR = 'static'
-BUILD_DIR = 'serve'
+BUILD_DIR = 'docs'
 
 def build_site():
     # Clean up the build directory if it exists

@@ -19,15 +19,19 @@ def get_site_data(rel_path: str) -> dict:
     p = Path(rel_path).parent
     site_data = {}
     local_tree = site_data_overrides_tree
-    for part in p.parts:
+    for part in list(p.parts) + [None]:
         for key in local_tree:
             if key.startswith('/'):
                 continue
             site_data[key] = local_tree[key]
 
-        if not ('/' + part in local_tree):
+        if part is None:
+            break
+
+        if not (('/' + part) in local_tree):
             return site_data
         local_tree = local_tree['/' + part]
+
     return site_data
 
 def build(TEMPLATES_DIR: str, sub:str='.'):

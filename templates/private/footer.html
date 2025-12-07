@@ -1,0 +1,111 @@
+<footer class="py-5 bg-light text-center">
+  <div class="container">
+    {% if use_extended_footer %}
+        <ul class="nav justify-content-center mb-2">
+    {% else %}
+        <ul class="nav justify-content-center">
+    {% endif %}
+    {% if use_extended_footer %}
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://cgmeerkat.readthedocs.io"
+          onclick="trackLinkClick('footer_read_the_docs')"
+          >Documentation</a
+        >
+      </li>
+    {% endif %}
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://cgmeerkat.gumroad.com"
+          onclick="trackLinkClick('footer_gumroad')"
+          >Gumroad</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://superhivemarket.com/creators/cgmeerkat"
+          onclick="trackLinkClick('footer_blendermarket')"
+          >Superhive</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="/blog/"
+          onclick="trackLinkClick('footer_blog_directory')"
+          >Blog</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://superhivemarket.com/creators/cgmeerkat#contact?contact=contact"
+          onclick="trackLinkClick('footer_contact_BlenderMarket')"
+          >Contact</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://www.youtube.com/@CGmeerkat"
+          onclick="trackLinkClick('footer_youtube')"
+          title="YouTube"
+        >
+          <i class="bi bi-youtube"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://x.com/CGMeerkat"
+          onclick="trackLinkClick('footer_twitter')"
+          title="Twitter"
+        >
+          <i class="bi bi-twitter-x"></i>
+        </a>
+      </li>
+    </ul>
+    {% if use_extended_footer %}
+    <ul class="small nav justify-content-center">
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="/impulse-response-player/"
+          onclick="trackLinkClick('footer_ir_player')"
+          >CycleAcoustics: Impulse Response Tester</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://blender-addons.org/addon_author/cg-meerkat/"
+          onclick="trackLinkClick('footer_blender-addons.org')"
+          title="blender-addons.org"
+          >Blender Addons</a
+        >
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          href="https://github.com/cgmeerkat/blender-addons-issues/issues"
+          onclick="trackLinkClick('footer_github_issues')"
+          >Bug Reports</a
+        >
+      </li>
+    </ul>
+    {% endif %}
+    <small>
+      &copy; 2025 CG Meerkat.
+
+    {% if use_extended_footer %}
+        <span class="text-muted"
+            >Blender, Blender add-ons / addons / plug-ins / plugins / extensions are
+            licensed under GPL.
+        </span>
+    {% endif %}
+    </small>
+  </div>
+</footer>

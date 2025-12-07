@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Blender Add-Ons & Materials | CG Meerkat</title>
+    <meta
+      name="description"
+      content="Blender addons and assets. CG Meerkat’s tools integrate into Blender 3D software to help designers, animators, and 3D artists like you with your 3D modeling and rendering needs."
+    />
+
+    {% include './private/head/meta.html' %}
+
+    <link rel="stylesheet" href="../sty.css" />
+
+    <style>
+      header {
+        min-height: 50vh;
+      }
+      .showcase > .col {
+        width: 25%;
+        flex: 1 1 25%;
+      }
+    </style>
+
+    <script src="/events.js"></script>
+
+    <script src="https://gumroad.com/js/gumroad.js"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-light bg-light">
+      <div class="container">
+        <a
+          class="navbar-brand"
+          href="/"
+          href="https://cgmeerkat.gumroad.com/?section=xu_vEukJs1nuYcY_SjUsHQ%3D%3D"
+          onclick="trackLinkClick('navbar_brand_to_gum_blog')"
+        >
+          <img
+            src="/logo.jpg"
+            alt="CG Meerkat logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-top rounded-circle"
+          />
+          <span class="d-inline-block pt-2 ms-2">CG Meerkat</span>
+        </a>
+        <!--a class="btn btn-outline-danger" href="https://cgmeerkat.gumroad.com">All Products</a-->
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            onclick="trackButtonClick('header_all_products')"
+          >
+            All Products
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a
+                class="dropdown-item"
+                href="https://superhivemarket.com/creators/cgmeerkat"
+                >Superhive</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://cgmeerkat.gumroad.com"
+                >Gumroad</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="https://www.youtube.com/@CGMeerkat"
+                >YouTube</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="hero d-flex flex-column" id="hero-blender">
+      <div class="container mt-auto">
+        <div class="row my-5 row-cols-1 row-cols-md-2">
+          <div class="col blurb">
+            <h1 class="display-5">Take your Blender game to the next level.</h1>
+            <p class="lead">
+              Level up your creations and streamline your workflow with CG
+              Meerkat’s Blender add-ons, node setups, and assets.
+            </p>
+          </div>
+          <div class="col"></div>
+        </div>
+      </div>
+    </header>
+    <!--section id='pearly' class="bg-success text-white py-4 text-center">
+            <div class="container">
+                <h3 class="display-5">Get <a href="https://cgmeerkat.gumroad.com/l/blender-AgMax" class="text-white" onclick="trackLinkClick('promo_AgMax_to_gumroad')"><em>AgMax</em></a> 35% Off</h3>
+                <p class="lead">
+                    Use Discount Code <a href="https://cgmeerkat.gumroad.com/l/blender-AgMax" class="no-underline" onclick="trackLinkClick('promo_kbd_discount_code_to_gumroad_AgMax')"><kbd><code class="text-warning">SUMMER24</code></kbd></a>
+                </p>
+                <small>Discount Code Valid Until 1 September 2024</small>
+            </div>
+        </section-->
+    <section
+      class="product text-white"
+      style="background-color: rgb(52, 20, 108)"
+    >
+      <div class="container">
+        <div class="row">
+          <div class="col descript d-flex flex-column">
+            <div class="condense" style="--fade-bg-color: rgb(52, 20, 108)">
+              <h2>
+                <small style="font-weight: normal"
+                  ><span class="badge bg-danger rounded-pill">NEW</span></small
+                >
+                CycleAcoustics
+              </h2>
+              <p class="m-0">
+                A sound design addon for Blender artists, music producers,
+                filmmakers, and more.
+                <strong
+                  >Simulate sound using Cycles raytracing and generate
+                  convolution reverb impulse responses from Blender
+                  models!</strong
+                >
+                Stereo reverb and psychoacoustic processing.
+              </p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mt-2">
+                <a
+                  class="a btn btn-primary w-100"
+                  href="https://cgmeerkat.gumroad.com/l/CycleAcoustics"
+                  onclick="trackButtonClick('gumroad_CycleAcoustics')"
+                  >Details & Video Demo</a
+                >
+                <a
+                  class="b gumroad-button w-100"
+                  href="https://cgmeerkat.gumroad.com/l/CycleAcoustics"
+                  onclick="trackButtonClick('embed_gumroad_CycleAcoustics')"
+                  >Details on</a
+                >
+              </div>
+              <div class="col mt-2">
+                <a
+                  class="btn btn-orange w-100"
+                  href="https://superhivemarket.com/products/cycleacoustics"
+                  onclick="trackButtonClick('BlenderMarket_CycleAcoustics')"
+                  >Get It from Superhive</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex align-items-center">
+            <img
+              src="products/CycleAcoustics-Model-to-Reverb-Addon.jpg"
+              alt="Screen-Space Angular Cavity Compositor Node"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex align-items-center">
+            <img
+              src="products/Origin-Wrangler.webp"
+              alt="Origin Wrangler addon"
+            />
+          </div>
+          <div class="col descript d-flex flex-column">
+            <div class="condense" style="--fade-bg-color: white">
+              <h2>Origin Wrangler</h2>
+              <p class="m-0">
+                A lightweight but powerful and time-saving Blender add-on for
+                manipulating objects’ origins efficiently. Bulk-align origins,
+                set origins to selected faces/edges/vertices, interpolate
+                origins, set origins on X, Y, and/or Z axes (local and global),
+                set origins based on post-modifiers geometry…
+              </p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mt-2">
+                <a
+                  class="a btn btn-purple w-100"
+                  href="https://cgmeerkat.gumroad.com/l/blender-origin-wrangler"
+                  onclick="trackButtonClick('gumroad_origin_wrangler')"
+                  >See How It Works on Gumroad</a
+                >
+                <a
+                  class="b gumroad-button w-100"
+                  href="https://cgmeerkat.gumroad.com/l/blender-origin-wrangler"
+                  onclick="trackButtonClick('embed_gumroad_origin_wrangler')"
+                  >Details on</a
+                >
+              </div>
+              <div class="col mt-2">
+                <a
+                  class="btn btn-orange w-100"
+                  href="https://superhivemarket.com/products/origin-wrangler"
+                  onclick="trackButtonClick('BlenderMarket_origin_wrangler')"
+                  >Get It from Superhive</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product bg-info">
+      <div class="container">
+        <div class="row">
+          <div class="col descript d-flex flex-column">
+            <div class="condense" style="--fade-bg-color: var(--bs-info)">
+              <h2>Ultimate Compositor Cavity</h2>
+              <p class="m-0">
+                A screen-space cavity/curvature pass in 1 node.
+                <em>Ultimate Compositor Cavity</em> is a Blender nodegroup that
+                allows you to render and composite a ridges–&-valleys cavity
+                (also known as curvature) pass of your render to add fake bevel,
+                ambient occlusion, worn edge, dirt, and highlight effects.
+              </p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mt-2">
+                <a
+                  class="a btn btn-dark w-100"
+                  href="https://cgmeerkat.gumroad.com/l/blender-cavity"
+                  onclick="trackButtonClick('gumroad_cavity')"
+                  >See The Cool Stuff It Can Do</a
+                >
+                <a
+                  class="b gumroad-button w-100"
+                  href="https://cgmeerkat.gumroad.com/l/blender-cavity"
+                  onclick="trackButtonClick('embed_gumroad_cavity')"
+                  >Details on</a
+                >
+              </div>
+              <div class="col mt-2">
+                <a class="btn btn-outline-dark disabled w-100"
+                  >Coming Soon to Superhive</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col d-flex align-items-center">
+            <img
+              src="products/Ultimate-Compositor-Cavity.webp"
+              alt="Screen-Space Angular Cavity Compositor Node"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="product">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex align-items-center">
+            <img src="products/AgMax.webp" alt="Origin Wrangler addon" />
+          </div>
+          <div class="col descript d-flex flex-column">
+            <div class="condense" style="--fade-bg-color: white">
+              <h2>AgMax</h2>
+              <p class="m-0">
+                Compositor tonemapper inspired by Blender’s <em>AgX</em> and
+                <em>Khronos</em> view transforms. <em>AgMax</em> gives filmlike
+                highlights and vibrant saturation in midtones—without clipping,
+                artifacts, and unwanted hue shifts. It’s configurable so you can
+                get the look you’re going for.
+              </p>
+            </div>
+            <div class="row row-cols-1 row-cols-lg-2">
+              <div class="col mt-2">
+                <a
+                  class="a btn btn-danger w-100"
+                  href="https://cgmeerkat.gumroad.com/l/blender-origin-wrangler"
+                  onclick="trackButtonClick('gumroad_AgMax')"
+                  >See It in Action</a
+                >
+                <a
+                  class="b gumroad-button w-100"
+                  href="https://cgmeerkat.gumroad.com/l/blender-origin-wrangler"
+                  onclick="trackButtonClick('embed_gumroad_AgMax')"
+                  >Details on</a
+                >
+              </div>
+              <div class="col mt-2">
+                <a
+                  class="b btn btn-outline-dark w-100"
+                  href="/blog/who-needs-a-tonemapper/"
+                  onclick="trackButtonClick('product_blurb_to_blog_article_tonemapper')"
+                  >Tonemapping Article</a
+                >
+                <a
+                  class="a btn btn-outline-dark w-100"
+                  href="https://cgmeerkat.gumroad.com/p/who-needs-a-tonemapper"
+                  onclick="trackButtonClick('product_blurb_to_gumroad_post_tonemapper')"
+                  >Tonemapping Article</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="row g-0 showcase">
+        <div class="col">
+          <a
+            href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr"
+            onclick="trackOtherClick('image_to_gumroad_metals')"
+          >
+            <img
+              class="w-100"
+              src="products/15-Metals-with-Rust-and-Physically-Based-Fresnel-and-Surface-Imperfections-Is-PBR-Blender-Shader-Collection.jpg"
+              alt="15 Metals with Rust and Physically Based Fresnel and Surface Imperfections Is PBR Blender Shader Collection"
+            />
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="https://cgmeerkat.gumroad.com/l/blender-NiceGlass"
+            onclick="trackOtherClick('image_to_gumroad_NiceGlass')"
+          >
+            <img
+              class="w-100"
+              src="products/NiceGlass-Blender-Glass-Shader-with-Dispersion-and-Caustics.webp"
+              alt="NiceGlass Blender Glass Shader with Dispersion and Caustics"
+            />
+          </a>
+        </div>
+        <div class="col">
+          <a
+            href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials"
+            onclick="trackOtherClick('image_to_gumroad_textiles_nodes')"
+          >
+            <img
+              class="w-100"
+              src="products/Blender-Fabric-Material-Collection-8-Textile-Styles.webp"
+              alt="Blender Fabric Material Collection 8 Textile Styles"
+            />
+          </a>
+        </div>
+        <div
+          class="col p-4 d-none d-xl-block"
+          style="max-height: 25vw; overflow: hidden; overflow-y: auto"
+        >
+          <h3>Shaders & Material Packs</h3>
+          <p>
+            At CG Meerkat, we make materials and textures to help Blender users
+            make their best creations.
+          </p>
+          <a
+            class="btn btn-lg btn-danger w-100 d-block mb-2"
+            href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q=="
+            onclick="trackButtonClick('gumroad_all_mats')"
+            >Browse Blender Materials</a
+          >
+          <a
+            class="a btn btn-outline-danger w-100 d-block mb-2"
+            href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr"
+            onclick="trackButtonClick('gumroad_metals')"
+            >Physically-Based Metals</a
+          >
+          <a
+            class="a btn btn-outline-danger w-100 d-block mb-2"
+            href="https://cgmeerkat.gumroad.com/l/blender-NiceGlass"
+            onclick="trackButtonClick('gumroad_NiceGlass')"
+            >Dispersive Glass</a
+          >
+          <a
+            class="a btn btn-outline-danger w-100 d-block"
+            href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials"
+            onclick="trackButtonClick('gumroad_textiles_nodes')"
+            >Cloth/Fabric/Textile Materials</a
+          >
+          <a
+            class="b btn btn-outline-danger w-100 d-block mb-2"
+            href="https://superhivemarket.com/products/15-metals-pbr"
+            onclick="trackButtonClick('BlenderMarket_metals')"
+            >Physically-Based Metals</a
+          >
+          <a
+            class="b btn btn-outline-danger w-100 d-block mb-2"
+            href="https://superhivemarket.com/products/niceglass"
+            onclick="trackButtonClick('BlenderMarket_NiceGlass')"
+            >Dispersive Glass</a
+          >
+          <a
+            class="b btn btn-outline-danger w-100 d-block"
+            href="https://superhivemarket.com/products/woven-and-knitted-textile-fabric-materials"
+            onclick="trackButtonClick('BlenderMarket_textiles_nodes')"
+            >Cloth/Fabric/Textile Materials</a
+          >
+        </div>
+      </div>
+      <div class="container d-block d-xl-none py-4">
+        <h3 class="text-center">Shaders & Material Packs</h3>
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item">
+            <a
+              class="a text-dark text-decoration-none d-flex justify-content-between align-items-center"
+              href="https://cgmeerkat.gumroad.com/l/blender-15-metals-pbr"
+              onclick="trackLinkClick('gumroad_metals')"
+            >
+              <strong>Physically-Based Metals</strong>
+              <span class="badge bg-danger rounded-pill"
+                ><i class="bi bi-chevron-right"></i
+              ></span>
+            </a>
+            <a
+              class="b text-dark text-decoration-none d-flex justify-content-between align-items-center"
+              href="https://superhivemarket.com/products/15-metals-pbr"
+              onclick="trackLinkClick('BlenderMarket_metals')"
+            >
+              <strong>Physically-Based Metals</strong>
+              <span class="badge bg-danger rounded-pill"
+                ><i class="bi bi-chevron-right"></i
+              ></span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a
+              class="a text-dark text-decoration-none d-flex justify-content-between align-items-center"
+              href="https://cgmeerkat.gumroad.com/l/blender-NiceGlass"
+              onclick="trackLinkClick('gumroad_NiceGlass')"
+            >
+              <strong>Dispersive Glass</strong>
+              <span class="badge bg-danger rounded-pill"
+                ><i class="bi bi-chevron-right"></i
+              ></span>
+            </a>
+            <a
+              class="b text-dark text-decoration-none d-flex justify-content-between align-items-center"
+              href="https://superhivemarket.com/products/niceglass"
+              onclick="trackLinkClick('BlenderMarket_NiceGlass')"
+            >
+              <strong>Dispersive Glass</strong>
+              <span class="badge bg-danger rounded-pill"
+                ><i class="bi bi-chevron-right"></i
+              ></span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a
+              class="a text-dark text-decoration-none d-flex justify-content-between align-items-center"
+              href="https://cgmeerkat.gumroad.com/l/blender-8-fabrics-materials"
+              onclick="trackLinkClick('gumroad_textiles_nodes')"
+            >
+              <strong>Cloth/Fabric/Textile Materials</strong>
+              <span class="badge bg-danger rounded-pill"
+                ><i class="bi bi-chevron-right"></i
+              ></span>
+            </a>
+            <a
+              class="b text-dark text-decoration-none d-flex justify-content-between align-items-center"
+              href="https://superhivemarket.com/products/woven-and-knitted-textile-fabric-materials"
+              onclick="trackLinkClick('BlenderMarket_textiles_nodes')"
+            >
+              <strong>Cloth/Fabric/Textile Materials</strong>
+              <span class="badge bg-danger rounded-pill"
+                ><i class="bi bi-chevron-right"></i
+              ></span>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a
+              class="text-dark text-decoration-none d-flex justify-content-between align-items-center"
+              href="https://cgmeerkat.gumroad.com/?section=s7F3OFO7kdwYV-aBb6hb2Q==#s7F3OFO7kdwYV-aBb6hb2Q=="
+              onclick="trackLinkClick('gumroad_all_mats')"
+            >
+              <span>Browse All</span>
+              <span class="badge bg-danger rounded-pill"
+                ><i class="bi bi-box-arrow-up-right"></i
+              ></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="product bg-dark text-white">
+      <div class="container">
+        <div class="row">
+          <div class="col d-flex align-items-center">
+            <img
+              src="products/Vector-Math-Compositor-Nodes-Pack.webp"
+              alt="Vector Math Compositor Nodes Pack"
+            />
+          </div>
+          <div class="col descript d-flex flex-column">
+            <div class="condense" style="--fade-bg-color: var(--bs-dark)">
+              <h2>Vector Math Compositor Nodes Pack</h2>
+              <p class="m-0">
+                <strong>FREE!</strong> Vector math nodes in the compositor.
+              </p>
+            </div>
+            <!--div class="row row-cols-1 row-cols-lg-2">
+                            <div class="col mt-2"-->
+
+            <div class="d-grid gap-2 mb-2">
+              <a
+                class="a btn btn-warning w-100"
+                href="https://cgmeerkat.gumroad.com/l/blender-compositor-vector-math-nodes"
+                onclick="trackButtonClick('gumroad_vector_nodes')"
+                ><i class="bi bi-file-earmark-arrow-down"></i>
+                <b>Free</b> Download</a
+              >
+              <a
+                class="b gumroad-button w-100"
+                href="https://cgmeerkat.gumroad.com/l/blender-compositor-vector-math-nodes"
+                onclick="trackButtonClick('embed_gumroad_vector_nodes')"
+                >Download via</a
+              >
+            </div>
+
+            <!--/div>
+                <div class="col mt-2">
+                    <a class="btn btn-outline-warning disabled w-100">Coming Soon to Superhive</a>
+                </div>
+            </div-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include './private/footer.html' %}
+
+    <script src="../random.js"></script>
+  </body>
+</html>

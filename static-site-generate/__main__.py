@@ -22,7 +22,7 @@ def build_site():
     rel_paths, contents = html_templates.build(TEMPLATES_DIR, sub=TEMPLATES_PAGES_SUBDIR)
     print("✔ Filled All Templates")
 
-    distribute_rendered_html.distribute(contents, rel_paths, BUILD_DIR)
+    distribute_rendered_html.distribute(contents, rel_paths, BUILD_DIR, os.path.join(TEMPLATES_DIR, TEMPLATES_PAGES_SUBDIR))
     print("✔ Exported All HTML")
 
     xml_sitemap_add_timestamps.modify_xml_sitemap_inplace(BUILD_DIR, "sitemap.xml")

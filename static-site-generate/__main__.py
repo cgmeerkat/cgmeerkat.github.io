@@ -1,7 +1,7 @@
 import os
 import shutil
 
-from . import copy_static, html_templates, distribute_rendered_html
+from . import copy_static, html_templates, distribute_rendered_html, xml_sitemap_add_timestamps
 
 # Define source and destination directories
 TEMPLATES_DIR = 'templates'
@@ -24,6 +24,9 @@ def build_site():
 
     distribute_rendered_html.distribute(contents, rel_paths, BUILD_DIR)
     print("✔ Exported All HTML")
+
+    xml_sitemap_add_timestamps.modify_xml_sitemap_inplace(BUILD_DIR, "sitemap.xml")
+    print("✔ Updated XML Sitemap")
 
 if __name__ == '__main__':
     build_site()
